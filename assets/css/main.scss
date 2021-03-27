@@ -1,0 +1,210 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 16/10=62.5% -> 1rem = 10px */
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    margin: 0;
+    color: $color-text;
+    font-weight: 330;
+    line-height: 1.5;
+    text-align: left;
+    background: linear-gradient(to top left, rgba(254, 173, 166, .6) 0%, $color-background 55%);
+}
+
+section {
+  padding: 6rem;
+
+  @media only screen and (max-width: 1100px) {
+    height: calc(100vh - 13rem);
+    overflow-y: scroll;
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 1.5rem;
+  }
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url('../fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url('../fonts/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $color-text;
+  font-weight: 300;
+  font-size: 7rem;
+  letter-spacing: 5px;
+  text-shadow: $box-shadow-outset-l;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 5rem;
+    letter-spacing: 4px;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    color: $color-text;
+    background-color: $color-background;
+    box-shadow: $box-shadow-outset-s;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: $border;
+    padding: 0.55rem 0.95rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    border-radius: $border-radius;
+    transition: box-shadow 1s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: $box-shadow-inset;
+  }
+}
+
+
+
+/***********************************************
+************************************************
+UTILITY CLASSES
+************************************************
+***********************************************/
+
+.mb-xs {
+  margin-bottom: .3rem;
+}
+
+.mb-s {
+  margin-bottom: .6rem;
+}
+
+.mb-m {
+  margin-bottom: 1.2rem;
+}
+
+.mb-l {
+  margin-bottom: 3rem;
+}
+
+.mb-xl {
+  margin-bottom: 6rem;
+}
+
+.mt-xs {
+  margin-top: .3rem;
+}
+
+.mt-s {
+  margin-top: .6rem;
+}
+
+.mt-m {
+  margin-top: 1.2rem;
+}
+
+.mt-l {
+  margin-top: 3rem;
+}
+
+.mt-xl {
+  margin-top: 6rem;
+}
+
+
+
+/***********************************************
+************************************************
+PAGE ANIMATIONS
+************************************************
+***********************************************/
+
+.page-enter-active {
+    animation: bounce-in .8s;
+}
+
+.page-leave-active {
+    animation: bounce-out .5s;
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce-out {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(.9); opacity: 0; }
+}
+
+
+
+/***********************************************
+************************************************
+SCROLLBAR STYLING
+************************************************
+***********************************************/
+
+/* Works in Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $color-text;
+  }
+  
+  /* Works in Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 1.2rem;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $color-text;
+    border-radius: $border-radius;
+    border: 3px solid $color-background;
+  }
