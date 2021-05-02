@@ -60,14 +60,16 @@ h1 {
   text-transform: uppercase;
   color: $color-text;
   font-weight: 300;
-  font-size: 7rem;
+  //font-size: 7rem;
   letter-spacing: 5px;
   text-shadow: $box-shadow-outset-l;
 
-  @media only screen and (max-width: 767px) {
+  font-size: clamp(3.5rem, 6vw, 8rem);
+
+  /* @media only screen and (max-width: 767px) {
     font-size: 5rem;
     letter-spacing: 4px;
-  }
+  } */
 }
 
 h2 {
@@ -193,16 +195,16 @@ SCROLLBAR STYLING
     scrollbar-width: thin;
     scrollbar-color: $color-text;
   }
-  
+
   /* Works in Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 1.2rem;
   }
-  
+
   *::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   *::-webkit-scrollbar-thumb {
     background-color: $color-text;
     border-radius: $border-radius;
