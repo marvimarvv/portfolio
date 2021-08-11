@@ -1,6 +1,6 @@
 <template>
     <section>
-      <h1 class="mb-l">My private projects</h1>
+      <h1 class="mb-m">My private projects</h1>
       <div class="projects">
         <Card heading="Fußpflege Heike Tandler"></Card>
       </div>
@@ -27,7 +27,7 @@ export default {
 <style lang="scss">
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     gap: 3rem;
 }
 </style>

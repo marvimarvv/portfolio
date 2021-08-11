@@ -8,13 +8,13 @@
                 </nuxt-link>
             </li>
             <li class="nav__item">
-                <nuxt-link class="nav__link" data-toggle="tab" to="about">
+                <nuxt-link class="nav__link" data-toggle="tab" to="projects">
                     <svg class="nav__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 23h-20c-2.208 0-4-1.792-4-4v-15.694c.313-1.071 1.285-2.306 3-2.306 1.855 0 2.769 1.342 2.995 2.312l.005 1.688h18v18zm-1-17h-17v13s-.665-1-2-1c-1.104 0-2 .896-2 2s.896 2 2 2h19v-16zm-18-2.68c-.427-.971-1.327-1.325-2-1.32-.661.005-1.568.3-2 1.32v16.178c.394-1.993 2.245-2.881 4-2.401v-13.777zm15 15.68h-12v-10h12v10zm-8-9h-3v8h10v-4h-2v3h-1v-3h-3v3h-1v-7zm7 0h-6v3h6v-3z"/></svg>
                     <span>Projects</span>
                 </nuxt-link>
             </li>
             <li class="nav__item">
-                <nuxt-link class="nav__link" data-toggle="tab" to="cv">
+                <nuxt-link class="nav__link" data-toggle="tab" to="vita">
                     <svg class="nav__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 22h-24v-20h24v20zm-1-19h-22v18h22v-18zm-4 13v1h-4v-1h4zm-6.002 1h-10.997l-.001-.914c-.004-1.05-.007-2.136 1.711-2.533.789-.182 1.753-.404 1.892-.709.048-.108-.04-.301-.098-.407-1.103-2.036-1.305-3.838-.567-5.078.514-.863 1.448-1.359 2.562-1.359 1.105 0 2.033.488 2.545 1.339.737 1.224.542 3.033-.548 5.095-.057.106-.144.301-.095.41.14.305 1.118.531 1.83.696 1.779.41 1.773 1.503 1.767 2.56l-.001.9zm-9.998-1h8.999c.003-1.014-.055-1.27-.936-1.473-1.171-.27-2.226-.514-2.57-1.267-.174-.381-.134-.816.119-1.294.921-1.739 1.125-3.199.576-4.111-.332-.551-.931-.855-1.688-.855-.764 0-1.369.31-1.703.871-.542.91-.328 2.401.587 4.09.259.476.303.912.13 1.295-.342.757-1.387.997-2.493 1.252-.966.222-1.022.478-1.021 1.492zm18-3v1h-6v-1h6zm0-3v1h-6v-1h6zm0-3v1h-6v-1h6z"/></svg>
                     <span>Vita</span>
                 </nuxt-link>
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
-.nav {      
+.nav {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -53,7 +53,7 @@ export default {
         box-shadow: 11px 3px 10px #767676;
         background-color: $color-background;
     }
-    
+
     &__item {
         font-size: 1.2rem;
         flex: 0 0 15%;
@@ -74,8 +74,8 @@ export default {
         padding: 0.75rem 0.85rem;
         text-transform: uppercase;
         text-decoration: none;
-        color: black;
-        font-size: 2rem;    
+        color: $color-text;
+        font-size: 2rem;
         transition: all 0.2s ease;
         box-shadow: $box-shadow-outset-l;
         border: 1px solid #D1D9E6;

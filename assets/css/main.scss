@@ -26,16 +26,16 @@ body {
 }
 
 section {
-  padding: 6rem;
+  padding: 0 6rem 6rem;
 
   @media only screen and (max-width: 1100px) {
     height: calc(100vh - 12rem);
+    padding: 6vh clamp(2rem, 8vw, 15rem);
     overflow-y: scroll;
-    padding: 3rem;
   }
 
-  @media only screen and (max-width: 500px) {
-    padding: 1.5rem;
+  @media only screen and (max-width: 400px) {
+    height: calc(100vh - 11rem);
   }
 }
 
@@ -100,11 +100,19 @@ h2 {
     transition: box-shadow 1s ease-in-out;
     text-decoration: none;
     cursor: pointer;
+    transition: transform .5s;
   }
 
   &:focus,
   &:hover {
     box-shadow: $box-shadow-inset;
+    transform: translateY(-3px);
+    transition: transform .5s;
+  }
+
+  &:active {
+    transform: translateY(3px);
+    transition: transform .5s;
   }
 }
 
@@ -134,6 +142,10 @@ UTILITY CLASSES
 
 .mb-xl {
   margin-bottom: 6rem;
+}
+
+.mb-xxl {
+  margin-bottom: 10rem;
 }
 
 .mt-xs {
