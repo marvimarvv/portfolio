@@ -29,6 +29,7 @@ export default {
 
     &__picture {
       width: 100%;
+      position: relative;
       aspect-ratio: 1/1;
       border-radius: $border-radius;
       padding: 2rem;
@@ -38,6 +39,13 @@ export default {
       box-shadow: $box-shadow-inset;
       background-color: $color-background;
 
+      &::before {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top left, rgba(254, 173, 166, .6) 0%, $color-background 55%);
+      }
     }
 
     &__quotation-bg {

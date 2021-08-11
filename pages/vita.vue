@@ -3,9 +3,9 @@
         <Profile></Profile>
         <h1 class="mb-l">Professional journey</h1>
         <ol class="timeline">
-            <span class="timeline__today">today</span>
             <div class="timeline__line">
             </div>
+            <span class="timeline__today">today</span>
             <li class="timeline__left timeline__left--1">
                 <h2 class="timeline__heading mb-s">ePages - UI Designer</h2>
                 <p class="timeline__text">Designing user interfaces for an <strong>e-commerce platform.</strong> Having the merchant's needs in mind and good usability is key here. Also I am working on the storefront enabling the merchants to create <strong>beautiful online shops</strong> with our themes and components.</p>
@@ -45,16 +45,17 @@ export default {
     gap: 5rem;
     list-style: none;
 
-    &__today {
-      grid-row: 1/2;
-      grid-column: 1/4;
-      justify-self: center;
+   &__today {
+      grid-column: 2/3;
+      grid-row: 2/8;
     }
 
     &__line {
         width: 15px;
         grid-column: 2/3;
         grid-row: 2/8;
+        justify-self: center;
+        margin-top: 4rem;
         border-radius: $border-radius;
         transition: all 0.2s ease;
         box-shadow: $box-shadow-outset-l;
