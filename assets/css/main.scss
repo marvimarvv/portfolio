@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  height: -webkit-fill-available;
   font-size: 62.5%; /* 16/10=62.5% -> 1rem = 10px */
   scroll-behavior: smooth;
   -webkit-scroll-behavior: smooth;
@@ -27,6 +28,8 @@ body {
     rgba(254, 173, 166, 0.6) 0%,
     $color-background 55%
   );
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }
 
 section {
