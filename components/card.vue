@@ -47,6 +47,7 @@ export default {
     border-radius: $border-radius;
 
     &__image {
+        max-width: 100%;
         border-top-left-radius: 0.55rem;
         border-top-right-radius: 0.55rem;
     }

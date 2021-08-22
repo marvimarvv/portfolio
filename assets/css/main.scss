@@ -7,22 +7,26 @@
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; /* 16/10=62.5% -> 1rem = 10px */
-    scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%; /* 16/10=62.5% -> 1rem = 10px */
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
 }
 
 body {
-    box-sizing: border-box;
-    font-family: $font-primary;
-    font-size: 1.8rem;
-    margin: 0;
-    color: $color-text;
-    font-weight: 330;
-    line-height: 1.5;
-    text-align: left;
-    background: linear-gradient(to top left, rgba(254, 173, 166, .6) 0%, $color-background 55%);
+  box-sizing: border-box;
+  font-family: $font-primary;
+  font-size: 1.8rem;
+  margin: 0;
+  color: $color-text;
+  font-weight: 330;
+  line-height: 1.5;
+  text-align: left;
+  background: linear-gradient(
+    to top left,
+    rgba(254, 173, 166, 0.6) 0%,
+    $color-background 55%
+  );
 }
 
 section {
@@ -40,19 +44,20 @@ section {
 }
 
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;
-  src: url('../fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  src: url("../fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-style: italic;
   font-weight: 100 700;
   font-display: swap;
-  src: url('../fonts/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+  src: url("../fonts/JosefinSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 h1 {
@@ -74,7 +79,7 @@ h1 {
 
 h2 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .btn {
@@ -100,23 +105,21 @@ h2 {
     transition: box-shadow 1s ease-in-out;
     text-decoration: none;
     cursor: pointer;
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
 
   &:focus,
   &:hover {
     box-shadow: $box-shadow-inset;
     transform: translateY(-3px);
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
 
   &:active {
     transform: translateY(3px);
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
 }
-
-
 
 /***********************************************
 ************************************************
@@ -125,11 +128,11 @@ UTILITY CLASSES
 ***********************************************/
 
 .mb-xs {
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 
 .mb-s {
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
 }
 
 .mb-m {
@@ -149,11 +152,11 @@ UTILITY CLASSES
 }
 
 .mt-xs {
-  margin-top: .3rem;
+  margin-top: 0.3rem;
 }
 
 .mt-s {
-  margin-top: .6rem;
+  margin-top: 0.6rem;
 }
 
 .mt-m {
@@ -168,8 +171,6 @@ UTILITY CLASSES
   margin-top: 6rem;
 }
 
-
-
 /***********************************************
 ************************************************
 PAGE ANIMATIONS
@@ -177,24 +178,34 @@ PAGE ANIMATIONS
 ***********************************************/
 
 .page-enter-active {
-    animation: bounce-in .8s;
+  animation: bounce-in 0.8s;
 }
 
 .page-leave-active {
-    animation: bounce-out .5s;
+  animation: bounce-out 0.5s;
 }
 
 @keyframes bounce-in {
-  0% { transform: scale(.9); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes bounce-out {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(.9); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
 }
-
-
 
 /***********************************************
 ************************************************
@@ -203,22 +214,22 @@ SCROLLBAR STYLING
 ***********************************************/
 
 /* Works in Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: $color-text;
-  }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-text;
+}
 
-  /* Works in Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 1.2rem;
-  }
+/* Works in Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 1.2rem;
+}
 
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: $color-text;
-    border-radius: $border-radius;
-    border: 3px solid $color-background;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: $color-text;
+  border-radius: $border-radius;
+  border: 3px solid $color-background;
+}

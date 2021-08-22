@@ -1,7 +1,7 @@
 <template>
     <section>
         <Profile></Profile>
-        <h1 class="mb-l">Professional journey</h1>
+        <h1>Professional journey</h1>
         <ol class="timeline">
             <div class="timeline__line">
             </div>
@@ -42,7 +42,7 @@ export default {
 .timeline {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
-    gap: 5rem;
+    gap: 3rem;
     list-style: none;
 
    &__today {

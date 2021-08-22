@@ -1,12 +1,10 @@
 <template>
-  <aside>
-    <article class="profile mb-xxl">
-        <img src="../assets/images/marvintandler.png" alt="Photo of Marvin Tandler" class="profile__picture">
-        <div class="profile__quotation-bg"></div>
-        <blockquote class="profile__quotation">
-          &ldquo;My passion lies where code and design meet. As a Frontend Designer, I love to make my designs a reality.&rdquo;
-        </blockquote>
-    </article>
+  <aside class="profile mb-xxl">
+      <img src="../assets/images/marvintandler.png" alt="Photo of Marvin Tandler" class="profile__picture">
+      <div class="profile__quotation-bg"></div>
+      <blockquote class="profile__quotation">
+        &ldquo;My passion lies where code and design meet. As a Frontend Designer, I love to make my designs a reality.&rdquo;
+      </blockquote>
   </aside>
 </template>
 
@@ -56,7 +54,7 @@ export default {
       grid-column: 1/4;
       background-image: radial-gradient($color-primary 0, rgba($color-background, .8) 80%);
       background-size: 80% 80%;
-      animation: gradient 10s linear infinite alternate-reverse;
+      animation: gradient 7s linear infinite alternate-reverse;
 
       @keyframes gradient {
         0% {
