@@ -27,7 +27,7 @@ export default {
 <style lang="scss">
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
     gap: 3rem;
 }
 </style>

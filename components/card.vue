@@ -8,7 +8,7 @@
                     {{item.bulletpoint}}
                 </li>
             </ul>
-            <a class="btn" href="https://fusspflegetandler.de">Visit site</a>
+            <a class="btn" href="https://fusspflegetandler.de" target="blank">Visit site</a>
         </div>
     </article>
 </template>

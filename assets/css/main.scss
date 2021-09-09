@@ -1,3 +1,8 @@
+// Use custom property to fix mobile browser 100vh issue https://dev.to/maciejtrzcinski/100vh-problem-with-ios-safari-3ge9
+:root {
+  --app-height: 100%;
+}
+
 *,
 *::after,
 *::before {
@@ -8,7 +13,6 @@
 
 html {
   box-sizing: border-box;
-  height: -webkit-fill-available;
   font-size: 62.5%; /* 16/10=62.5% -> 1rem = 10px */
   scroll-behavior: smooth;
   -webkit-scroll-behavior: smooth;
@@ -28,21 +32,19 @@ body {
     rgba(254, 173, 166, 0.6) 0%,
     $color-background 55%
   );
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
 }
 
 section {
   padding: 0 6rem 6rem;
 
   @media only screen and (max-width: 1100px) {
-    height: calc(100vh - 12rem);
+    height: calc(var(--app-height) - 12rem);
     padding: 6vh clamp(2rem, 8vw, 15rem);
     overflow-y: scroll;
   }
 
   @media only screen and (max-width: 400px) {
-    height: calc(100vh - 11rem);
+    height: calc(var(--app-height) - 11rem);
   }
 }
 

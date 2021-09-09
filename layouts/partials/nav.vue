@@ -106,6 +106,7 @@ export default {
 /* exact link will show the styling for only the exact matching link */
 a.nuxt-link-exact-active {
     box-shadow: $box-shadow-inset;
+    font-weight: 600;
 }
 
 </style>

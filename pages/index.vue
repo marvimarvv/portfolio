@@ -7,6 +7,14 @@
     </div>
     <div id="intro__particles" aria-label="Visually interactive area that responds to mouse movements">
     </div>
+    <nuxt-link class="intro__link" to="projects">
+      <span class="intro__link-text">
+        View my projects
+      </span>
+      <span class="intro__link-icon">
+        &rarrhk;
+      </span>
+    </nuxt-link>
   </section>
 </template>
 
@@ -21,9 +29,9 @@ export default {
 <style lang="scss">
 .intro {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: auto 1fr 4fr 1fr;
-  max-width: 110rem;
+  grid-template-columns: .5fr 1fr 4fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1fr max-content;
+  max-width: 100rem;
   margin: auto;
 
   @media only screen and (min-width: 1100px) {
@@ -35,28 +43,44 @@ export default {
 
   &__title {
     grid-column: 1/-1;
-    grid-row: 1/2;
-    align-self: end;
+    grid-row: 1/3;
+    align-self: center;
+    isolation: isolate;
   }
 
   &__artboard {
-    grid-column: 1/3;
-    grid-row: 2/4;
+    grid-column: 2/4;
+    grid-row: 2/5;
     box-shadow: $box-shadow-outset-l;
-    isolation: isolate;
     padding: 3rem;
     background-image: url("../assets/images/coverart.svg");
     background-size: cover;
     background-repeat: none;
+    border-radius: $border-radius;
+  }
+
+  &__link {
+    grid-column: 1/-1;
+    grid-row: 6/-1;
+    justify-self: end;
+    align-self: end;
+    margin-top: 3rem;
+    text-decoration: none;
+    padding: 8px 12px;
+    color: white;
+    background-color: #ff695c;
+    border-radius: 5px;
+    text-transform: capitalize;
   }
 }
 
 #intro__particles {
-  grid-column: 2/-1;
-  grid-row: 3/-1;
+  grid-column: 3/6;
+  grid-row: 4/6;
   background-color: rgba(20, 20, 20, 0.7);
   box-shadow: $box-shadow-outset-l;
   overflow: hidden;
   isolation: isolate;
+  border-radius: $border-radius;
 }
 </style>
