@@ -11,9 +11,6 @@
       <span class="intro__link-text">
         View my projects
       </span>
-      <span class="intro__link-icon">
-        &rarrhk;
-      </span>
     </nuxt-link>
   </section>
 </template>

@@ -36,14 +36,6 @@ export default {
       isolation: isolate; // create new stacking context
       box-shadow: $box-shadow-inset;
       background-color: $color-background;
-
-      &::before {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to top left, rgba(254, 173, 166, .6) 0%, $color-background 55%);
-      }
     }
 
     &__quotation-bg {
@@ -52,9 +44,9 @@ export default {
       border-radius: $border-radius;
       grid-row: 2/4;
       grid-column: 1/4;
-      background-image: radial-gradient($color-primary 0, rgba($color-background, .8) 80%);
-      background-size: 80% 80%;
-      animation: gradient 7s linear infinite alternate-reverse;
+      background-image: radial-gradient($color-primary 0, rgba($color-background, .8) 30%, $color-primary 50%, rgba($color-background, .8) 75%, $color-primary 100%);
+      background-size: 400% 400%;
+      animation: gradient 35s linear infinite alternate-reverse;
 
       @keyframes gradient {
         0% {
