@@ -32,7 +32,7 @@ export default {
   margin: auto;
 
   @media only screen and (min-width: 1100px) {
-    height: calc(100vh - 191px);
+    height: calc(var(--app-height) - 191px);
     max-height: 80rem;
     padding-top: 0;
     padding-bottom: 6rem;
