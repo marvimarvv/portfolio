@@ -16,6 +16,9 @@ html {
   font-size: 62.5%; /* 16/10=62.5% -> 1rem = 10px */
   scroll-behavior: smooth;
   -webkit-scroll-behavior: smooth;
+  // Eliminate weird overflow on iOS Safari
+  height: var(--app-height);
+  overflow: hidden;
 }
 
 body {
