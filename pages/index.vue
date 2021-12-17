@@ -27,7 +27,7 @@ export default {
 .intro {
   display: grid;
   grid-template-columns: .5fr 1fr 4fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 4fr 1fr max-content;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr max-content;
   max-width: 100rem;
   margin: auto;
 
@@ -58,7 +58,7 @@ export default {
 
   &__link {
     grid-column: 1/-1;
-    grid-row: 6/-1;
+    grid-row: 7/-1;
     justify-self: end;
     align-self: end;
     margin-top: 3rem;
@@ -73,7 +73,7 @@ export default {
 
 #intro__particles {
   grid-column: 3/6;
-  grid-row: 4/6;
+  grid-row: 4/7;
   background-color: rgba(20, 20, 20, 0.7);
   box-shadow: $box-shadow-outset-l;
   overflow: hidden;

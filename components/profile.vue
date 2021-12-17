@@ -1,6 +1,7 @@
 <template>
   <aside class="profile mb-xxl">
       <img src="../assets/images/marvintandler.png" alt="Photo of Marvin Tandler" class="profile__picture">
+      <div class="profile__picture-overlay"></div>
       <div class="profile__quotation-bg"></div>
       <blockquote class="profile__quotation">
         &ldquo;My passion lies where code and design meet. As a Frontend Designer, I love to make my designs a reality.&rdquo;
@@ -26,16 +27,29 @@ export default {
     }
 
     &__picture {
-      width: 100%;
-      position: relative;
-      aspect-ratio: 1/1;
-      border-radius: $border-radius;
-      padding: 2rem;
+      // Create new stacking context to overlay background
+      isolation: isolate;
       grid-row: 1/3;
       grid-column: 2/3;
-      isolation: isolate; // create new stacking context
+      border-radius: $border-radius;
+      padding: 2rem;
       box-shadow: $box-shadow-inset;
       background-color: $color-background;
+      width: 100%;
+      aspect-ratio: 1/1;
+
+      &-overlay {
+        // Create new stacking context to be in same one as the image
+        isolation: isolate;
+        grid-row: 1/3;
+        grid-column: 2/3;
+        background-color: rgba($color-primary, .15);
+        padding: 2rem;
+        box-shadow: $box-shadow-inset;
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: $border-radius;
+      }
     }
 
     &__quotation-bg {

@@ -1,6 +1,6 @@
 <template>
     <article class="card">
-        <img src="../assets/images/fusspflege.png" class="card__image" alt="Screenshot Seite Fußpflege Heike Tandler">
+        <img height="360" width="640" src="../assets/images/fusspflege.png" class="card__image" alt="Screenshot Seite Fußpflege Heike Tandler">
         <div class="card__body">
             <h2 class="mb-s">{{heading}}</h2>
             <ul class="card__list mb-l">
@@ -48,6 +48,7 @@ export default {
 
     &__image {
         max-width: 100%;
+        height: auto;
         border-top-left-radius: 0.55rem;
         border-top-right-radius: 0.55rem;
     }
