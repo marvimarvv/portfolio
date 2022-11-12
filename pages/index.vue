@@ -31,9 +31,7 @@ export default {
   max-width: 100rem;
   margin: auto;
 
-  @media only screen and (min-width: 1100px) {
-    height: calc(var(--app-height) - 191px);
-    max-height: 80rem;
+  @media (min-width: 1101px) {
     padding-top: 0;
     padding-bottom: 6rem;
   }

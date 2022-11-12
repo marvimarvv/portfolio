@@ -44,14 +44,10 @@ export default {
     margin: 0 auto;
     list-style: none;
 
-    @media only screen and (max-width: 1100px) {
-        position: fixed;
-        z-index: 1;
-        bottom: 0;
-        justify-content: space-evenly;
-        padding: 20px 0;
-        box-shadow: 11px 3px 10px #767676;
-        background-color: $color-background;
+    @media (max-width: 1100px) {
+      justify-content: space-evenly;
+      padding: 20px 0;
+      box-shadow: 11px 3px 10px #767676;
     }
 
     &__item {
@@ -61,7 +57,7 @@ export default {
         text-align: center;
         background-color: $color-background;
 
-        @media only screen and (max-width: 1100px) {
+        @media (max-width: 1100px) {
             flex: 0 0 auto;
         }
     }
@@ -75,13 +71,13 @@ export default {
         text-transform: uppercase;
         text-decoration: none;
         color: $color-text;
-        font-size: 2rem;
+        font-size: 1.5rem;
         transition: all 0.2s ease;
         box-shadow: $box-shadow-outset-l;
         border: 1px solid #D1D9E6;
         border-radius: $border-radius;
 
-        @media only screen and (max-width: 1100px) {
+        @media (max-width: 1100px) {
             width: 8rem;
             height: 8rem;
             margin-bottom: 0;
@@ -89,7 +85,7 @@ export default {
             font-size: 1rem;
         }
 
-        @media only screen and (max-width: 400px) {
+        @media (max-width: 400px) {
             height: 7rem;
             width: 7rem;
             padding: 1rem 0;
@@ -97,9 +93,7 @@ export default {
     }
 
     &__icon {
-        @media only screen and (max-width: 1100px) {
-            margin-bottom: .5rem;
-        }
+      margin-bottom: .5rem;
     }
 }
 

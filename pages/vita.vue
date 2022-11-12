@@ -16,7 +16,7 @@
             </li>
             <li class="timeline__left timeline__left--2">
                 <h2 class="timeline__heading mb-s">MYLILY - Frontend Designer & Shop Admin</h2>
-                <p class="timeline__text">Allrounder tech admin position. Working with Shopify to improve the shop's <strong>look & performance.</strong> Implementing <strong>e-commerce</strong> best pratices, managing the company's blog with Wordpress. Extending the visiblity of the online shop by implementing <strong>marketing camaigns & SEO.</strong></p>
+                <p class="timeline__text">Allrounder tech admin position. Working with Shopify to improve the shop's <strong>look & performance.</strong> Implementing <strong>e-commerce</strong> best practices, managing the company's blog with Wordpress. Extending the visiblity of the online shop by implementing <strong>marketing camaigns & SEO.</strong></p>
             </li>
             <li class="timeline__right timeline__right--2">
                 <h2 class="timeline__heading mb-s">FH Westküste - B. Sc. Management & Technology</h2>
