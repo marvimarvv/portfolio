@@ -3,23 +3,28 @@
 *::before {
   margin: 0;
   padding: 0;
+  // Set it to inherit to make it a bit easier to change box-sizing in other components, plugins
   box-sizing: inherit;
 }
 
 *::selection {
   color: white;
-  background-color: $color-primary;
+  background-color: darken($color-primary, 20%);
 }
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /* 16/10=62.5% -> 1rem = 10px */
+  // Use a percentage to scale with the user's font-size set in the browser
+  // 16/10=62.5% -> 1rem = 10px
+  font-size: 62.5%;
+
   // Set overscroll color
   background-color: $color-background;
 
   scroll-behavior: smooth;
+
   @media (prefers-reduced-motion) {
-      scroll-behavior: initial;
+    scroll-behavior: initial;
   }
 }
 
@@ -43,6 +48,8 @@ section {
   padding: 0 6rem 6rem;
   transition: height 0.3s ease;
   overflow: auto;
+  // Keep content at the top of the page if there not enough to fill it
+  margin-bottom: auto;
 
   @media only screen and (max-width: 1100px) {
     padding: 6vh clamp(2rem, 8vw, 15rem);
@@ -229,7 +236,8 @@ SCROLLBAR STYLING
 /* Works in Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: transparentize($color-text, 0.3) transparentize($color-text, 0.9);
+  scrollbar-color: transparentize($color-text, 0.3)
+    transparentize($color-text, 0.9);
 }
 
 /* Works in Chrome, Edge, and Safari */
