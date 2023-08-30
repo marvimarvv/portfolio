@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="mb-m">My skill set</h1>
+    <h1 class="mb-l">My skill set</h1>
     <ul class="skills">
       <li class="skills__list-item">
         <figure class="skills__row">
@@ -302,20 +302,28 @@ export default {};
       color: $color-primary;
       line-height: 1;
 
+      &::after,
+      &::before {
+        position: absolute;
+        font-size: 23rem;
+        top: 0%;
+      }
+
+      @media (min-width: 901px) {
+        &::after,
+        &::before {
+          font-size: 35rem;
+        }
+      }
+
       &::after {
         content: "}";
-        position: absolute;
-        font-size: 30rem;
         left: 60%;
-        top: 0%;
       }
 
       &::before {
         content: "{";
-        position: absolute;
-        font-size: 30rem;
         right: 60%;
-        top: 0%;
       }
     }
 

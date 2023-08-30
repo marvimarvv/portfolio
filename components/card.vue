@@ -1,11 +1,9 @@
 <template>
   <article class="card">
-    <img
-      height="360"
-      width="640"
-      src="../assets/images/fusspflege.png"
+    <nuxt-picture
+      src="/fusspflege.png"
       class="card__image"
-      alt="Screenshot Seite Fußpflege Heike Tandler"
+      alt="Screenshot Site Fußpflege Heike Tandler"
     />
     <div class="card__body">
       <h2 class="mb-s">{{ heading }}</h2>
@@ -51,9 +49,7 @@ export default {
   background-clip: border-box;
   border-radius: $border-radius;
 
-  &__image {
-    max-width: 100%;
-    height: auto;
+  img {
     border-top-left-radius: 0.55rem;
     border-top-right-radius: 0.55rem;
   }

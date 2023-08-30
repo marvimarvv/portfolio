@@ -9,11 +9,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "fibers": "^5.0.1",
     "jquery": "^3.5.1",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.6.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "node-sass": "^5.0.0",
     "nuxt-gsap-module": "^1.3.2",

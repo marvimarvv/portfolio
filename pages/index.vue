@@ -3,10 +3,11 @@
     <h1 class="intro__title">
       Marvin Tandler
     </h1>
-    <div class="intro__artboard" aria-label="Decorative gradient image">
-    </div>
-    <div id="intro__particles" aria-label="Visually interactive area that responds to mouse movements">
-    </div>
+    <div class="intro__artboard" aria-label="Decorative gradient image"></div>
+    <div
+      id="intro__particles"
+      aria-label="Visually interactive area that responds to mouse movements"
+    ></div>
     <nuxt-link class="intro__link" to="projects">
       <span class="intro__link-text">
         View my projects
@@ -17,16 +18,16 @@
 
 <script>
 export default {
-  mounted () {
-   this.$particles()
+  mounted() {
+    this.$particles();
   }
-}
+};
 </script>
 
 <style lang="scss">
 .intro {
   display: grid;
-  grid-template-columns: .5fr 1fr 4fr 1fr;
+  grid-template-columns: 0.5fr 1fr 4fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr max-content;
   max-width: 100rem;
   margin: auto;
@@ -48,7 +49,7 @@ export default {
     grid-row: 2/5;
     box-shadow: $box-shadow-outset-l;
     padding: 3rem;
-    background-image: url("../assets/images/coverart.svg");
+    background-image: url("/coverart.svg");
     background-size: cover;
     background-repeat: none;
     border-radius: $border-radius;
@@ -66,6 +67,34 @@ export default {
     background-color: #ff695c;
     border-radius: 5px;
     text-transform: capitalize;
+    transition: all 0.5s ease;
+
+    &:focus-visible {
+      background-color: #ff4331;
+      transform: translateY(-3px);
+      transition: transform 0.5s;
+    }
+
+    @media (pointer: fine) and (hover: hover) {
+      &:hover {
+        background-color: #ff4331;
+        transform: translateY(-3px);
+        transition: transform 0.5s;
+      }
+
+      &:active {
+        transform: translateY(3px);
+        transition: transform 0.5s;
+      }
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        background-color: #ff4331;
+        transform: translateY(5px);
+        transition: transform 1s;
+      }
+    }
   }
 }
 

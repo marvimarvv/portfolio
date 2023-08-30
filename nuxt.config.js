@@ -23,7 +23,7 @@ export default {
         name: "description",
         content: process.env.npm_package_description || ""
       },
-      { name: "theme-color", content: "#e6e7ee" }
+      { name: "theme-color", content: "#fff" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -51,7 +51,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ["nuxt-gsap-module"],
+  buildModules: ["nuxt-gsap-module", "@nuxt/image"],
 
   gsap: {
     extraPlugins: {
@@ -62,10 +62,14 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/style-resources"],
+  modules: ["@nuxtjs/style-resources", "@nuxt/image"],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {
+    babel: {
+      plugins: ["@babel/plugin-proposal-optional-chaining"]
+    }
+  }
 };
