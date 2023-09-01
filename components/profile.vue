@@ -87,7 +87,7 @@ export default {
   }
 
   &__quotation {
-    font-size: clamp(3rem, 3vw, 4.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.4;
     font-weight: 300;
     grid-row: 3/4;

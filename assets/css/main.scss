@@ -19,19 +19,19 @@ html {
   font-size: 62.5%;
 
   // Set overscroll color
-  background-color: $color-background;
+  background-color: #fff;
 
   scroll-behavior: smooth;
 
   @media (prefers-reduced-motion) {
-    scroll-behavior: initial;
+    scroll-behavior: unset;
   }
 }
 
 body {
   box-sizing: border-box;
   font-family: $font-primary;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin: 0;
   color: $color-text;
   font-weight: 330;
@@ -58,7 +58,7 @@ section {
   margin-bottom: auto;
 
   @media (max-width: 1100px) {
-    padding: 6vh clamp(1.5rem, 8vw, 15rem);
+    padding: clamp(1.5rem, 5vw, 15rem);
   }
 }
 
@@ -92,7 +92,7 @@ h1 {
 
 h2 {
   font-weight: 500;
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
   line-height: 1.3;
 }
 
@@ -123,28 +123,18 @@ h2 {
 
   &:focus-visible {
     box-shadow: $box-shadow-inset;
-    transform: translateY(-3px);
-    transition: transform 0.5s;
   }
 
   @media (pointer: fine) and (hover: hover) {
     &:hover {
       box-shadow: $box-shadow-inset;
-      transform: translateY(-3px);
-      transition: transform 0.5s;
-    }
-
-    &:active {
-      transform: translateY(3px);
-      transition: transform 0.5s;
+      transition: all 0.5s ease;
     }
   }
 
   @media (pointer: coarse) {
     &:active {
       box-shadow: $box-shadow-inset;
-      transform: translateY(5px);
-      transition: transform 1s;
     }
   }
 }

@@ -85,7 +85,7 @@ export default {};
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
-  padding: 6rem;
+  padding: 3rem 6rem 6rem;
   margin: 0 auto;
   list-style: none;
 
@@ -93,6 +93,10 @@ export default {};
     justify-content: space-evenly;
     padding: 20px 0;
     box-shadow: 11px 3px 10px #767676;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 0;
   }
 
   &__item {
@@ -131,7 +135,7 @@ export default {};
       font-size: 1rem;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       height: 7rem;
       width: 7rem;
       padding: 1rem 0;

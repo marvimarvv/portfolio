@@ -56,7 +56,7 @@ export default {
 
   &__body {
     flex: 1 1 auto;
-    padding: 3rem 1.5rem;
+    padding: 1.8rem;
   }
 
   &__list {
