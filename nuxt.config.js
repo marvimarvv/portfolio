@@ -67,9 +67,5 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {
-    babel: {
-      plugins: ["@babel/plugin-proposal-optional-chaining"]
-    }
-  }
+  build: {}
 };
