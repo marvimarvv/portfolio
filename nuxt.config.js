@@ -1,14 +1,9 @@
 export default {
   /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: "universal",
-  /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: "server",
+  target: "static",
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -21,11 +16,11 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
+        content: process.env.npm_package_description || "",
       },
-      { name: "theme-color", content: "#fff" }
+      { name: "theme-color", content: "#fff" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Global CSS
@@ -33,7 +28,7 @@ export default {
   css: ["@/assets/css/main.scss", "~assets/scss/global_variables.scss"],
 
   styleResources: {
-    scss: ["./assets/scss/*.scss"]
+    scss: ["./assets/scss/*.scss"],
   },
   /*
    ** Plugins to load before mounting the App
@@ -41,7 +36,7 @@ export default {
    */
   plugins: [
     { src: "@/plugins/particles.js", mode: "client" },
-    { src: "@/plugins/mobileVh.js", mode: "client" }
+    { src: "@/plugins/mobileVh.js", mode: "client" },
   ],
   /*
    ** Auto import components
@@ -56,8 +51,8 @@ export default {
   gsap: {
     extraPlugins: {
       scrollTo: true,
-      scrollTrigger: true
-    }
+      scrollTrigger: true,
+    },
   },
   /*
    ** Nuxt.js modules
@@ -67,5 +62,5 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
 };
