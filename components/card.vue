@@ -30,33 +30,33 @@ export default {
         { bulletpoint: "Sass" },
         { bulletpoint: "NPM" },
         { bulletpoint: "Brilliant Page Speed Score" },
-        { bulletpoint: "On Scroll Animations" }
-      ]
+        { bulletpoint: "On Scroll Animations" },
+      ],
     };
-  }
+  },
 };
 </script>
 
 <style lang="scss">
 .card {
   position: relative;
-  box-shadow: $box-shadow-outset-l;
+  box-shadow: var(--box-shadow-outset-l);
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
   background-clip: border-box;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
 
   img {
-    border-top-left-radius: 0.55rem;
-    border-top-right-radius: 0.55rem;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
   }
 
   &__body {
     flex: 1 1 auto;
-    padding: 1.8rem;
+    padding: 1.8rem 1.8rem 0;
   }
 
   &__list {

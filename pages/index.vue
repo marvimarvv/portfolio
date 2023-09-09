@@ -1,17 +1,13 @@
 <template>
   <section class="intro">
-    <h1 class="intro__title">
-      Marvin Tandler
-    </h1>
+    <h1 class="intro__title">Marvin Tandler</h1>
     <div class="intro__artboard" aria-label="Decorative gradient image"></div>
     <div
       id="intro__particles"
       aria-label="Visually interactive area that responds to mouse movements"
     ></div>
     <nuxt-link class="intro__link" to="projects">
-      <span class="intro__link-text">
-        View my projects
-      </span>
+      <span class="intro__link-text"> View my projects </span>
     </nuxt-link>
   </section>
 </template>
@@ -20,7 +16,7 @@
 export default {
   mounted() {
     this.$particles();
-  }
+  },
 };
 </script>
 
@@ -47,12 +43,12 @@ export default {
   &__artboard {
     grid-column: 2/4;
     grid-row: 2/5;
-    box-shadow: $box-shadow-outset-l;
+    box-shadow: var(--box-shadow-outset-l);
     padding: 3rem;
     background-image: url("/coverart.svg");
     background-size: cover;
     background-repeat: none;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
   }
 
   &__link {
@@ -102,9 +98,9 @@ export default {
   grid-column: 3/6;
   grid-row: 4/7;
   background-color: rgba(20, 20, 20, 0.7);
-  box-shadow: $box-shadow-outset-l;
+  box-shadow: var(--box-shadow-outset-l);
   overflow: hidden;
   isolation: isolate;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
 }
 </style>

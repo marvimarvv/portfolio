@@ -87,9 +87,9 @@ export default {};
     grid-column: 2/3;
     grid-row: 2/8;
     justify-self: center;
-    border-radius: $border-radius;
+    border-radius: var(--border-radius);
     transition: all 0.2s ease;
-    box-shadow: $box-shadow-outset-l;
+    box-shadow: var(--box-shadow-outset-l);
     margin-top: 3rem;
   }
 

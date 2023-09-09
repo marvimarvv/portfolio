@@ -1,16 +1,47 @@
-/* FONT VARIABLES */
-$font-primary: "Josefin Sans", sans-serif;
+:root {
+  --font-primary: "Josefin Sans", sans-serif;
 
-/* COLORS VARIABLES */
-$color-text: rgb(58, 58, 58);
-$color-background: #ffffff;
-$color-primary: rgb(254, 173, 166);
+  color-scheme: dark light;
 
-/* BOX SHADOW VARIABLES */
-$box-shadow-outset-s: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
-$box-shadow-outset-l: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
-$box-shadow-inset: inset 2px 2px 6px #b8b9be, inset -3px -3px 7px #fff;
+  --border-radius: 5px;
 
-/* BORDER VARIABLES */
-$border: 0.1rem solid #e1e5ed;
-$border-radius: 5px;
+  /* destructure brand channels */
+  --hue: 6; /* change me!! */
+  --saturation: 98%;
+  --lightness: 82%;
+
+  /* build colors with props */
+  --brand: hsl(var(--hue) var(--saturation) var(--lightness));
+
+  /* very dark brand blue */
+  --text: hsl(var(--hue) var(--saturation) 10% /* lower is darker */);
+
+  /* very bright brand white */
+  --background: hsl(
+    var(--hue) calc(var(--saturation) / 2) 95% /* higher is lighter */
+  );
+
+  --box-shadow-outset-l: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
+  --box-shadow-outset-s: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  --box-shadow-inset: inset 2px 2px 6px #b8b9be, inset -3px -3px 7px #fff;
+
+  --border: 0.1rem solid #e1e5ed;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* just tweak the lightness */
+  /* maybe desaturate too */
+
+  :root {
+    --text: hsl(var(--hue) calc(var(--saturation) / 2) 85%);
+    --background: hsl(var(--hue) var(--saturation) 5%);
+    --shadow-color: hsl(var(--hue) var(--saturation) 10%);
+    --box-shadow-outset-l: 2px 2px 12px var(--shadow-color),
+      -2px -2px 12px var(--shadow-color);
+    --box-shadow-outset-s: 3px 3px 6px var(--shadow-color),
+      -3px -3px 6px var(--shadow-color);
+    --box-shadow-inset: inset 2px 2px 6px var(--shadow-color),
+      inset -3px -3px 7px var(--shadow-color);
+    --border: 0.1rem solid #262525;
+  }
+}

@@ -9,7 +9,7 @@
 
 *::selection {
   color: white;
-  background-color: darken($color-primary, 20%);
+  background-color: var(--brand);
 }
 
 html {
@@ -19,7 +19,7 @@ html {
   font-size: 62.5%;
 
   // Set overscroll color
-  background-color: #fff;
+  background-color: var(--background);
 
   scroll-behavior: smooth;
 
@@ -29,18 +29,15 @@ html {
 }
 
 body {
-  box-sizing: border-box;
-  font-family: $font-primary;
+  font-family: var(--font-primary);
   font-size: 1.6rem;
-  margin: 0;
-  color: $color-text;
+  color: var(--text);
   font-weight: 330;
   line-height: 1.5;
-  text-align: left;
   background: linear-gradient(
     to top left,
     rgba(254, 173, 166, 0.6) 0%,
-    $color-background 55%
+    var(--background) 55%
   );
 }
 
@@ -82,10 +79,8 @@ section {
 h1 {
   font-weight: 300;
   text-transform: uppercase;
-  color: $color-text;
   font-weight: 300;
   letter-spacing: 5px;
-  text-shadow: $box-shadow-outset-l;
   font-size: clamp(3rem, 4vw, 8rem);
   line-height: 1.4;
 }
@@ -100,10 +95,12 @@ h2 {
   &,
   &:link,
   &:visited {
-    color: $color-text;
-    background-color: $color-background;
-    box-shadow: $box-shadow-outset-s;
+    width: calc(100% + 3.6rem);
+    margin-left: -1.8rem;
+    margin-right: -1.8rem;
+    color: var(--text);
     display: inline-block;
+    border-top: 1px solid var(--shadow-color);
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
@@ -111,30 +108,30 @@ h2 {
     -ms-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    border: $border;
     padding: 0.55rem 0.95rem;
     font-size: 2rem;
     line-height: 1.5;
-    border-radius: $border-radius;
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
     text-decoration: none;
     cursor: pointer;
     transition: all 0.5s ease;
   }
 
   &:focus-visible {
-    box-shadow: $box-shadow-inset;
+    box-shadow: var(--box-shadow-inset);
   }
 
   @media (pointer: fine) and (hover: hover) {
     &:hover {
-      box-shadow: $box-shadow-inset;
+      box-shadow: var(--box-shadow-inset);
       transition: all 0.5s ease;
     }
   }
 
   @media (pointer: coarse) {
     &:active {
-      box-shadow: $box-shadow-inset;
+      box-shadow: var(--box-shadow-inset);
     }
   }
 }
@@ -234,8 +231,7 @@ SCROLLBAR STYLING
 /* Works in Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: transparentize($color-text, 0.3)
-    transparentize($color-text, 0.9);
+  scrollbar-color: var(--text);
 }
 
 /* Works in Chrome, Edge, and Safari */
@@ -244,10 +240,10 @@ SCROLLBAR STYLING
 }
 
 *::-webkit-scrollbar-track {
-  background: transparentize($color-text, 0.9);
+  background: var(--text);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: transparentize($color-text, 0.3);
-  border-radius: $border-radius;
+  background-color: var(--text);
+  border-radius: var(--border-radius);
 }

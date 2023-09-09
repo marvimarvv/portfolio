@@ -119,7 +119,7 @@
               x="0px"
               y="0px"
               viewBox="0 0 122.9 122.9"
-              style="enable-background:new 0 0 122.9 122.9;"
+              style="enable-background: new 0 0 122.9 122.9"
               xml:space="preserve"
               class="skills__icon__accessibility"
             >
@@ -148,7 +148,7 @@
             <div class="accessibility-icon-container">
               <div
                 class="accessibility-icon"
-                style="clip-path: url(#accessibility-clip);"
+                style="clip-path: url(#accessibility-clip)"
               ></div>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default {};
     }
 
     &__html {
-      background-color: $color-primary;
+      background-color: var(--brand);
       position: absolute;
       width: 100%;
       top: 0;
@@ -244,7 +244,7 @@ export default {};
       position: absolute;
       aspect-ratio: 1/1;
       border-radius: 50%;
-      background-color: $color-primary;
+      background-color: var(--brand);
 
       &--1 {
         top: 5%;
@@ -299,7 +299,7 @@ export default {};
       position: absolute;
       width: 100%;
       aspect-ratio: 1/1;
-      color: $color-primary;
+      color: var(--brand);
       line-height: 1;
 
       &::after,
@@ -330,7 +330,7 @@ export default {};
     &__accessibility {
       &__person,
       &__circle {
-        fill: $color-primary;
+        fill: var(--brand);
       }
     }
   }
@@ -348,7 +348,7 @@ export default {};
       font-size: 300%;
       line-height: 100%;
       font-family: monospace;
-      color: $color-primary;
+      color: var(--brand);
     }
   }
 }

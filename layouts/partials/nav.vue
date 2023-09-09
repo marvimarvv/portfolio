@@ -104,8 +104,6 @@ export default {};
     flex: 0 0 15%;
     padding: 0;
     text-align: center;
-    background-color: $color-background;
-    border-radius: $border-radius;
 
     @media (max-width: 1100px) {
       flex: 0 0 auto;
@@ -120,12 +118,13 @@ export default {};
     padding: 0.75rem 0.85rem;
     text-transform: uppercase;
     text-decoration: none;
-    color: $color-text;
+    color: var(--text);
     font-size: 1.5rem;
     transition: all 0.2s ease;
-    box-shadow: $box-shadow-outset-l;
-    border: $border;
-    border-radius: $border-radius;
+
+    path {
+      fill: var(--text);
+    }
 
     @media (max-width: 1100px) {
       width: 8rem;
@@ -149,7 +148,6 @@ export default {};
 
 /* exact link will show the styling for only the exact matching link */
 a.nuxt-link-exact-active {
-  box-shadow: $box-shadow-inset;
   font-weight: 600;
 }
 </style>

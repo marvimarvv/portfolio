@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "Profile"
+  name: "Profile",
 };
 </script>
 
@@ -39,8 +39,8 @@ export default {
     isolation: isolate;
     grid-row: 1/3;
     grid-column: 2/3;
-    border-radius: $border-radius;
-    background-color: $color-background;
+    border-radius: var(--border-radius);
+    background-color: var(--background);
     width: 100%;
     aspect-ratio: 1/1;
     outline: 1px solid rgba(113, 113, 113, 0.5);
@@ -50,25 +50,25 @@ export default {
       isolation: isolate;
       grid-row: 1/3;
       grid-column: 2/3;
-      background-color: rgba($color-primary, 0.15);
+      background-color: rgba(var(--brand), 0.15);
       width: 100%;
       aspect-ratio: 1/1;
-      border-radius: $border-radius;
+      border-radius: var(--border-radius);
     }
   }
 
   &__quotation-bg {
     padding: 4rem;
-    box-shadow: $box-shadow-inset;
-    border-radius: $border-radius;
+    box-shadow: var(--box-shadow-inset);
+    border-radius: var(--border-radius);
     grid-row: 2/4;
     grid-column: 1/4;
     background-image: radial-gradient(
-      $color-primary 0,
-      rgba($color-background, 0.8) 30%,
-      $color-primary 50%,
-      rgba($color-background, 0.8) 75%,
-      $color-primary 100%
+      var(--brand) 0,
+      rgba(var(--background), 0.8) 30%,
+      var(--brand) 50%,
+      rgba(var(--background), 0.8) 75%,
+      var(--brand) 100%
     );
     background-size: 300% 300%;
     animation: gradient 35s linear infinite alternate-reverse;
