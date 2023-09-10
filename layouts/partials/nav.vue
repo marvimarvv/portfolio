@@ -149,5 +149,16 @@ export default {};
 /* exact link will show the styling for only the exact matching link */
 a.nuxt-link-exact-active {
   font-weight: 600;
+  /* text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--text);
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 3px; */
+
+  path {
+    stroke: var(--text);
+    stroke-width: 1;
+  }
 }
 </style>

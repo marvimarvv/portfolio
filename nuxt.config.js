@@ -18,7 +18,6 @@ export default {
         name: "description",
         content: process.env.npm_package_description || "",
       },
-      { name: "theme-color", content: "#fff" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
@@ -37,6 +36,7 @@ export default {
   plugins: [
     { src: "@/plugins/particles.js", mode: "client" },
     { src: "@/plugins/mobileVh.js", mode: "client" },
+    { src: "@/plugins/dynamicThemeColor.js", mode: "client" },
   ],
   /*
    ** Auto import components

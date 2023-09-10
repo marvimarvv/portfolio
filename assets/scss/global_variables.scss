@@ -6,20 +6,20 @@
   --border-radius: 5px;
 
   /* destructure brand channels */
-  --hue: 6; /* change me!! */
+  --hue: 6;
   --saturation: 98%;
   --lightness: 82%;
 
   /* build colors with props */
   --brand: hsl(var(--hue) var(--saturation) var(--lightness));
 
-  /* very dark brand blue */
-  --text: hsl(var(--hue) var(--saturation) 10% /* lower is darker */);
+  /* very dark version of the brand color */
+  --text: hsl(var(--hue) var(--saturation) 10%); /* lower is darker */
 
   /* very bright brand white */
   --background: hsl(
-    var(--hue) calc(var(--saturation) / 2) 95% /* higher is lighter */
-  );
+    var(--hue) calc(var(--saturation) / 2) 95%
+  ); /* higher is lighter */
 
   --box-shadow-outset-l: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
   --box-shadow-outset-s: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
