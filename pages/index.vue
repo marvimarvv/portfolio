@@ -61,7 +61,7 @@ export default {
     padding: 8px 12px;
     color: white;
     background-color: #ff695c;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     text-transform: capitalize;
     transition: all 0.5s ease;
 

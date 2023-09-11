@@ -11,7 +11,7 @@
       My passion lies where
       <span class="profile__word profile__word--code">code</span> and
       <span class="profile__word profile__word--design">design</span> meet. As a
-      Frontend Designer, I love to make my designs a reality.
+      frontend designer, I love to make my designs a reality.
     </blockquote>
   </aside>
 </template>

@@ -127,17 +127,16 @@ export default {};
     }
 
     @media (max-width: 1100px) {
-      width: 8rem;
-      height: 8rem;
+      width: 6rem;
+      height: 6rem;
       margin-bottom: 0;
       padding: 0;
       font-size: 1rem;
     }
 
     @media (max-width: 480px) {
-      height: 7rem;
-      width: 7rem;
-      padding: 1rem 0;
+      height: 5rem;
+      width: 5rem;
     }
   }
 
@@ -148,13 +147,7 @@ export default {};
 
 /* exact link will show the styling for only the exact matching link */
 a.nuxt-link-exact-active {
-  font-weight: 600;
-  /* text-decoration-style: wavy;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--text);
-  text-decoration-line: underline;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 3px; */
+  font-weight: 900;
 
   path {
     stroke: var(--text);
