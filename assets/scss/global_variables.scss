@@ -25,7 +25,7 @@
   --box-shadow-outset-s: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
   --box-shadow-inset: inset 2px 2px 6px #b8b9be, inset -3px -3px 7px #fff;
 
-  --border: 0.1rem solid #e1e5ed;
+  --border: 0.1rem solid var(--text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,8 +33,8 @@
   /* maybe desaturate too */
 
   :root {
-    --text: hsl(var(--hue) calc(var(--saturation) / 2) 85%);
-    --background: hsl(var(--hue) var(--saturation) 5%);
+    --text: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
+    --background: hsl(calc(var(--hue) - 180) var(--saturation) 2%);
     --shadow-color: hsl(var(--hue) var(--saturation) 10%);
     --box-shadow-outset-l: 2px 2px 12px var(--shadow-color),
       -2px -2px 12px var(--shadow-color);
@@ -42,6 +42,6 @@
       -3px -3px 6px var(--shadow-color);
     --box-shadow-inset: inset 2px 2px 6px var(--shadow-color),
       inset -3px -3px 7px var(--shadow-color);
-    --border: 0.1rem solid #262525;
+    --border: 0.1rem solid var(--text);
   }
 }

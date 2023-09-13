@@ -43,7 +43,7 @@ export default {
     background-color: var(--background);
     width: 100%;
     aspect-ratio: 1/1;
-    outline: 1px solid rgba(113, 113, 113, 0.5);
+    border: var(--border);
 
     &-overlay {
       // Create new stacking context to be in same one as the image
@@ -59,7 +59,7 @@ export default {
 
   &__quotation-bg {
     padding: 4rem;
-    box-shadow: var(--box-shadow-inset);
+    border: var(--border);
     border-radius: var(--border-radius);
     grid-row: 2/4;
     grid-column: 1/4;

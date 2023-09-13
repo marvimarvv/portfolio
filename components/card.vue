@@ -40,7 +40,7 @@ export default {
 <style lang="scss">
 .card {
   position: relative;
-  box-shadow: var(--box-shadow-outset-l);
+  border: var(--border);
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;

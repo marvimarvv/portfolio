@@ -74,7 +74,7 @@ export default {};
 .timeline {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  gap: 3rem;
+  gap: 2rem;
   list-style: none;
 
   &__today {
@@ -89,7 +89,7 @@ export default {};
     justify-self: center;
     border-radius: var(--border-radius);
     transition: all 0.2s ease;
-    box-shadow: var(--box-shadow-outset-l);
+    border: var(--border);
     margin-top: 3rem;
   }
 
