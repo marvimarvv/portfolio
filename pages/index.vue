@@ -1,7 +1,13 @@
 <template>
   <section class="intro">
-    <h1 class="intro__title">Marvin Tandler</h1>
-    <div class="intro__artboard" aria-label="Decorative gradient image"></div>
+    <div
+      class="intro__artboard"
+      aria-label="Decorative rotating circles with text of the authot of the website: Marvin Tandler"
+    >
+      <span>Marvin Tandler</span>
+      <span>Marvin Tandler</span>
+      <span>Marvin Tandler</span>
+    </div>
     <div
       id="intro__particles"
       aria-label="Visually interactive area that responds to mouse movements"
@@ -43,12 +49,12 @@ export default {
   &__artboard {
     grid-column: 2/4;
     grid-row: 2/5;
-    box-shadow: var(--box-shadow-outset-l);
-    padding: 3rem;
-    background-image: url("/coverart.svg");
+    /* background-image: url("/coverart.svg");
     background-size: cover;
-    background-repeat: none;
+    background-repeat: none; */
     border-radius: var(--border-radius);
+    border: var(--border);
+    background-color: #201e1e;
   }
 
   &__link {
@@ -98,7 +104,6 @@ export default {
   grid-column: 3/6;
   grid-row: 4/7;
   background-color: rgba(20, 20, 20, 0.7);
-  box-shadow: var(--box-shadow-outset-l);
   overflow: hidden;
   isolation: isolate;
   border-radius: var(--border-radius);

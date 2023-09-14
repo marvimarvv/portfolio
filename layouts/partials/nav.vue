@@ -92,7 +92,7 @@ export default {};
   @media (max-width: 1100px) {
     justify-content: space-evenly;
     padding: 20px 0;
-    box-shadow: 11px 3px 10px #767676;
+    border-top: var(--border);
   }
 
   @media (max-width: 480px) {

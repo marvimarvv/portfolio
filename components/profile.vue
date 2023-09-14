@@ -41,7 +41,7 @@ export default {
     grid-column: 2/3;
     border-radius: var(--border-radius);
     background-color: var(--background);
-    width: 100%;
+    max-height: 40vh;
     aspect-ratio: 1/1;
     border: var(--border);
 
@@ -51,7 +51,7 @@ export default {
       grid-row: 1/3;
       grid-column: 2/3;
       background-color: rgba(var(--brand), 0.15);
-      width: 100%;
+      max-height: 40vh;
       aspect-ratio: 1/1;
       border-radius: var(--border-radius);
     }
