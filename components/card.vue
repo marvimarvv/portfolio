@@ -45,6 +45,7 @@ export default {
   img {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
+    aspect-ratio: 16/9;
   }
 
   &__heading {
