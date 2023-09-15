@@ -1,9 +1,6 @@
 <template>
   <section class="intro">
-    <div
-      class="intro__artboard"
-      aria-label="Decorative rotating circles with text of the author of the website: Marvin Tandler"
-    >
+    <div class="intro__artboard">
       <div class="intro__circular-text intro__circular-text--1">
         <svg viewBox="0 0 100 100">
           <path d="M0,50 a50,50 0 1,1 0,1z" id="circle"></path>
@@ -35,10 +32,7 @@
         </svg>
       </div>
     </div>
-    <div
-      id="intro__particles"
-      aria-label="Visually interactive area that responds to mouse movements"
-    ></div>
+    <div id="intro__particles"></div>
     <nuxt-link class="intro__link" to="projects">
       <span class="intro__link-text"> View my projects </span>
     </nuxt-link>
@@ -82,6 +76,10 @@ export default {
     border: var(--border);
     background-color: #201e1e;
     position: relative;
+
+    @media (prefers-color-scheme: light) {
+      background-color: #f5f5f5;
+    }
   }
 
   &__circular-text {

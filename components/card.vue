@@ -1,17 +1,8 @@
 <template>
   <article class="card">
-    <nuxt-picture
-      src="/fusspflege.png"
-      class="card__image"
-      alt="Screenshot Site Fußpflege Heike Tandler"
-    />
+    <nuxt-picture :src="link" class="card__image" :alt="alt" />
     <div class="card__body">
-      <h2 class="mb-s">{{ heading }}</h2>
-      <ul class="card__list mb-l">
-        <li v-for="item in items" :key="item.bulletpoint">
-          {{ item.bulletpoint }}
-        </li>
-      </ul>
+      <h2 class="card__heading">{{ heading }}</h2>
       <a class="btn" href="https://fusspflegetandler.de" target="blank"
         >Visit site</a
       >
@@ -22,17 +13,19 @@
 <script>
 export default {
   name: "Card",
-  props: ["heading"],
-  data() {
-    return {
-      items: [
-        { bulletpoint: "No CSS Framework" },
-        { bulletpoint: "Sass" },
-        { bulletpoint: "NPM" },
-        { bulletpoint: "Brilliant Page Speed Score" },
-        { bulletpoint: "On Scroll Animations" },
-      ],
-    };
+  props: {
+    heading: {
+      type: String,
+      default: "Default Heading",
+    },
+    link: {
+      type: String,
+      default: "",
+    },
+    alt: {
+      type: String,
+      default: "Default Alt Text",
+    },
   },
 };
 </script>
@@ -52,17 +45,18 @@ export default {
   img {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-    aspect-ratio: 16/9;
+  }
+
+  &__heading {
+    margin-bottom: 1.8rem;
   }
 
   &__body {
     flex: 1 1 auto;
     padding: 1.8rem 1.8rem 0;
-  }
-
-  &__list {
-    padding-left: 0.5rem;
-    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 </style>

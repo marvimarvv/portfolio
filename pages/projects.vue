@@ -2,7 +2,8 @@
   <section>
     <h1 class="mb-l">My private projects</h1>
     <div class="projects">
-      <Card heading="Fußpflege Heike Tandler"></Card>
+      <Card heading="Fußpflege Heike Tandler" link="/fusspflege.png"></Card>
+      <Card heading="Ernährung Dorota Lazarski" link="/ernaehrung.png"></Card>
     </div>
   </section>
 </template>
@@ -18,12 +19,12 @@ export default {
         { name: "description", content: "This is my projects page." },
         {
           name: "keywords",
-          content: "private projects, marvin tandler projects"
-        }
-      ]
+          content: "private projects, marvin tandler projects",
+        },
+      ],
     };
   },
-  components: { Card }
+  components: { Card },
 };
 </script>
 
