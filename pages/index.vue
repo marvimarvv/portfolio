@@ -2,11 +2,38 @@
   <section class="intro">
     <div
       class="intro__artboard"
-      aria-label="Decorative rotating circles with text of the authot of the website: Marvin Tandler"
+      aria-label="Decorative rotating circles with text of the author of the website: Marvin Tandler"
     >
-      <span>Marvin Tandler</span>
-      <span>Marvin Tandler</span>
-      <span>Marvin Tandler</span>
+      <div class="intro__circular-text intro__circular-text--1">
+        <svg viewBox="0 0 100 100">
+          <path d="M0,50 a50,50 0 1,1 0,1z" id="circle"></path>
+          <text>
+            <textPath xlink:href="#circle">
+              Marvin Tandler Marvin Tandler Marvin Tandler
+            </textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="intro__circular-text intro__circular-text--2">
+        <svg viewBox="0 0 100 100">
+          <path d="M0,50 a50,50 0 1,1 0,1z" id="circle"></path>
+          <text>
+            <textPath xlink:href="#circle">
+              Marvin Tandler Marvin Tandler Marvin Tandler
+            </textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="intro__circular-text intro__circular-text--3">
+        <svg viewBox="0 0 100 100">
+          <path d="M0,50 a50,50 0 1,1 0,1z" id="circle"></path>
+          <text>
+            <textPath xlink:href="#circle">
+              Marvin Tandler Marvin Tandler Marvin Tandler
+            </textPath>
+          </text>
+        </svg>
+      </div>
     </div>
     <div
       id="intro__particles"
@@ -33,6 +60,8 @@ export default {
   grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr max-content;
   max-width: 100rem;
   margin: auto;
+  // Avoid scrollbar bc of rotating circles on some screens
+  overflow: hidden;
 
   @media (min-width: 1101px) {
     padding-top: 0;
@@ -49,12 +78,63 @@ export default {
   &__artboard {
     grid-column: 2/4;
     grid-row: 2/5;
-    /* background-image: url("/coverart.svg");
-    background-size: cover;
-    background-repeat: none; */
     border-radius: var(--border-radius);
     border: var(--border);
     background-color: #201e1e;
+    position: relative;
+  }
+
+  &__circular-text {
+    position: absolute;
+
+    svg {
+      display: block;
+      overflow: visible;
+    }
+
+    text {
+      fill: currentColor;
+      font-size: 15px;
+      word-spacing: 0.8px;
+    }
+
+    path {
+      fill: none;
+    }
+
+    &--1 {
+      width: clamp(10rem, 15vw, 30rem);
+      height: clamp(10rem, 15vw, 30rem);
+      top: -10%;
+      left: -10%;
+      animation: rotate 20s linear infinite;
+    }
+
+    &--2 {
+      width: clamp(18rem, 25vw, 45rem);
+      height: clamp(18rem, 25vw, 45rem);
+      top: 50%;
+      left: 30%;
+      animation: rotate 20s linear infinite reverse;
+    }
+
+    &--3 {
+      width: clamp(7rem, 8vw, 20rem);
+      height: clamp(7rem, 8vw, 20rem);
+      top: 10%;
+      left: 90%;
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 
   &__link {
