@@ -1,5 +1,7 @@
 :root {
   --font-primary: "Josefin Sans", sans-serif;
+  --font-weight-normal: 330;
+  --font-weight-bold: 500;
 
   color-scheme: dark light;
 
@@ -13,6 +15,8 @@
   /* build colors with props */
   --brand: hsl(var(--hue) var(--saturation) var(--lightness));
 
+  --accent: hsl(var(--hue) var(--saturation) 65%);
+
   /* very dark version of the brand color */
   --text: hsl(var(--hue) var(--saturation) 10%); /* lower is darker */
 
@@ -21,10 +25,7 @@
     var(--hue) calc(var(--saturation) / 2) 95%
   ); /* higher is lighter */
 
-  --box-shadow-outset-l: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
-  --box-shadow-outset-s: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
-  --box-shadow-inset: inset 2px 2px 6px #b8b9be, inset -3px -3px 7px #fff;
-
+  --box-shadow: var(--text) 0px 25px 50px -12px;
   --border: 0.1rem solid var(--text);
 }
 
@@ -35,13 +36,17 @@
   :root {
     --text: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
     --background: hsl(calc(var(--hue) - 180) var(--saturation) 2%);
-    --shadow-color: hsl(var(--hue) var(--saturation) 10%);
-    --box-shadow-outset-l: 2px 2px 12px var(--shadow-color),
-      -2px -2px 12px var(--shadow-color);
-    --box-shadow-outset-s: 3px 3px 6px var(--shadow-color),
-      -3px -3px 6px var(--shadow-color);
-    --box-shadow-inset: inset 2px 2px 6px var(--shadow-color),
-      inset -3px -3px 7px var(--shadow-color);
     --border: 0.1rem solid var(--text);
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --text: #222222;
+    --background: #efefef;
+    --border: 0.3rem solid var(--text);
+    --font-weight-normal: 450;
+    --font-weight-bold: 700;
+    --lightness: 50%;
   }
 }

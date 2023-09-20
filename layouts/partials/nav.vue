@@ -157,5 +157,11 @@ a.nuxt-link-exact-active {
     stroke: var(--text);
     stroke-width: 1;
   }
+
+  @media (prefers-contrast: more) {
+    text-decoration: underline;
+    text-decoration-thickness: 0.3rem;
+    text-underline-offset: 0.5rem;
+  }
 }
 </style>

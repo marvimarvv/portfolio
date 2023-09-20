@@ -89,7 +89,7 @@ export default {
   &__quotation {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.4;
-    font-weight: 300;
+    font-weight: var(--font-weight-normal);
     grid-row: 3/4;
     grid-column: 1/4;
     padding: 3rem;
@@ -98,7 +98,7 @@ export default {
   }
 
   &__word {
-    font-weight: 600;
+    font-weight: var(--font-weight-bold);
   }
 }
 </style>

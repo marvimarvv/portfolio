@@ -74,7 +74,7 @@ export default {
     grid-row: 2/5;
     border-radius: var(--border-radius);
     border: var(--border);
-    background-color: #201e1e;
+    background-color: var(--background);
     position: relative;
 
     @media (prefers-color-scheme: light) {
@@ -138,26 +138,26 @@ export default {
   &__link {
     grid-column: 1/-1;
     grid-row: 7/-1;
-    justify-self: end;
+    justify-self: start;
     align-self: end;
     margin-top: 3rem;
     text-decoration: none;
     padding: 8px 12px;
-    color: white;
-    background-color: #ff695c;
+    color: #201e1e;
+    background-color: var(--accent);
     border-radius: var(--border-radius);
     text-transform: capitalize;
     transition: all 0.5s ease;
 
     &:focus-visible {
-      background-color: #ff4331;
+      background-color: var(--accent);
       transform: translateY(-3px);
       transition: transform 0.5s;
     }
 
     @media (pointer: fine) and (hover: hover) {
       &:hover {
-        background-color: #ff4331;
+        background-color: var(--accent);
         transform: translateY(-3px);
         transition: transform 0.5s;
       }
