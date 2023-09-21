@@ -24,6 +24,11 @@
   --background: hsl(
     var(--hue) calc(var(--saturation) / 2) 95%
   ); /* higher is lighter */
+  --background-gradient: conic-gradient(
+    from 3.1416rad at 0% 50%,
+    rgba(254, 173, 166, 0.6),
+    var(--background)
+  );
 
   --box-shadow: var(--text) 0px 25px 50px -12px;
   --border: 0.1rem solid var(--text);
@@ -49,4 +54,25 @@
     --font-weight-bold: 700;
     --lightness: 50%;
   }
+}
+
+.light-theme {
+  --text: hsl(var(--hue) var(--saturation) 10%);
+  --background: hsl(var(--hue) calc(var(--saturation) / 2) 95%);
+  --border: 0.1rem solid var(--text);
+}
+
+.dark-theme {
+  --text: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
+  --background: hsl(calc(var(--hue) - 180) var(--saturation) 2%);
+  --border: 0.1rem solid var(--text);
+}
+
+.contrast-theme {
+  --text: #222222;
+  --background: #efefef;
+  --border: 0.3rem solid var(--text);
+  --font-weight-normal: 450;
+  --font-weight-bold: 700;
+  --lightness: 50%;
 }

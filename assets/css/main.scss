@@ -34,11 +34,7 @@ body {
   color: var(--text);
   font-weight: var(--font-weight-normal);
   line-height: 1.5;
-  background: conic-gradient(
-    from 3.1416rad at 0% 50%,
-    rgba(254, 173, 166, 0.6),
-    var(--background)
-  );
+  background: var(--background-gradient);
 }
 
 img {

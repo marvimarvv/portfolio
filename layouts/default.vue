@@ -1,11 +1,23 @@
 <template>
   <main class="page-container">
-    <Nav />
+    <Nav></Nav>
     <Nuxt />
     <div class="floating-action-menu">
-      <button class="theme-button theme-button--contrast">Contrast</button>
-      <button class="theme-button theme-button--dark">Dark</button>
-      <button class="theme-button theme-button--light">Light</button>
+      <button
+        @click="setTheme('contrast')"
+        class="theme-button theme-button--contrast"
+      >
+        Contrast
+      </button>
+      <button @click="setTheme('dark')" class="theme-button theme-button--dark">
+        Dark
+      </button>
+      <button
+        @click="setTheme('light')"
+        class="theme-button theme-button--light"
+      >
+        Light
+      </button>
       <button class="main-button">Theme Picker</button>
     </div>
   </main>
@@ -16,6 +28,19 @@ import Nav from "./partials/nav";
 export default {
   components: {
     Nav,
+  },
+  methods: {
+    setTheme(theme) {
+      // Remove previous theme classes
+      document.documentElement.classList.remove(
+        "contrast-theme",
+        "dark-theme",
+        "light-theme"
+      );
+
+      // Add the new theme class to the html element
+      document.documentElement.classList.add(theme + "-theme");
+    },
   },
 };
 </script>
@@ -35,31 +60,6 @@ export default {
     height: 100vh;
     flex-direction: column;
   }
-}
-
-.light {
-  background: conic-gradient(
-    from 3.1416rad at 0% 50%,
-    rgba(254, 173, 166, 0.6),
-    hsl(var(--hue) calc(var(--saturation) / 2) 95%)
-  );
-  color: hsl(var(--hue) var(--saturation) 10%);
-}
-
-.dark {
-  background: conic-gradient(
-    from 3.1416rad at 0% 50%,
-    rgba(254, 173, 166, 0.6),
-    hsl(calc(var(--hue) - 180) var(--saturation) 2%)
-  );
-  color: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
-}
-
-.contrast {
-  color: #222222;
-  background-color: #efefef;
-  border: 0.3rem solid #222222;
-  font-weight: 700;
 }
 
 .floating-action-menu {
@@ -102,7 +102,6 @@ export default {
   button {
     border: none;
     color: var(--text);
-    padding: 0.4rem 0.8rem;
     cursor: pointer;
     width: 7rem;
     height: 7rem;
@@ -114,6 +113,7 @@ export default {
 
   .main-button {
     box-shadow: var(--box-shadow);
+    background: var(--background-gradient);
   }
 
   .theme-button {
@@ -121,17 +121,32 @@ export default {
 
     &--light {
       transform: translateY(100%);
-      @extend .light;
+      background: conic-gradient(
+        from 3.1416rad at 0% 50%,
+        rgba(254, 173, 166, 0.6),
+        hsl(var(--hue) calc(var(--saturation) / 2) 95%)
+      );
+      color: hsl(var(--hue) var(--saturation) 10%);
     }
+
     &--dark {
       transform: translateY(200%);
       transition-delay: 0.1s;
-      @extend .dark;
+      background: conic-gradient(
+        from 3.1416rad at 0% 50%,
+        rgba(254, 173, 166, 0.6),
+        hsl(calc(var(--hue) - 180) var(--saturation) 2%)
+      );
+      color: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
     }
+
     &--contrast {
       transform: translateY(300%);
       transition-delay: 0.2s;
-      @extend .contrast;
+      color: #222222;
+      background-color: #efefef;
+      border: 0.3rem solid #222222;
+      font-weight: 700;
     }
   }
 }
