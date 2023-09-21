@@ -51,7 +51,7 @@ P = 0.225,
     vx: 0,
     vy: 0,
     x: 0,
-    y: 0
+    y: 0,
   };
 
   function init() {
@@ -75,12 +75,15 @@ P = 0.225,
       list[i] = p;
     }
 
-    container.addEventListener("mousemove", function(e) {
-      var bounds = container.getBoundingClientRect();
-      mx = e.clientX - bounds.left;
-      my = e.clientY - bounds.top;
-      man = true;
-    });
+    // Only attach mousemove listener if prefers-reduced-motion is not set
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      container.addEventListener("mousemove", function (e) {
+        var bounds = container.getBoundingClientRect();
+        mx = e.clientX - bounds.left;
+        my = e.clientY - bounds.top;
+        man = true;
+      });
+    }
 
     if (typeof Stats === "function") {
       document.body.appendChild((stats = new Stats()).domElement);
@@ -90,6 +93,11 @@ P = 0.225,
   }
 
   function step() {
+    // Return early if prefers-reduced-motion is set
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
     if (stats) stats.begin();
 
     if ((tog = !tog)) {
@@ -133,5 +141,7 @@ P = 0.225,
   }
 
   init();
-  step();
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    step();
+  }
 };

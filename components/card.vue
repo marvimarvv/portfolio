@@ -74,6 +74,10 @@ export default {
           color: var(--background);
           background-color: var(--text);
           transition: all 0.5s ease;
+
+          @media (prefers-reduced-motion: reduce) {
+            transition: unset;
+          }
         }
       }
     }

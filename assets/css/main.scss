@@ -23,7 +23,7 @@ html {
 
   scroll-behavior: smooth;
 
-  @media (prefers-reduced-motion) {
+  @media (prefers-reduced-motion: reduce) {
     scroll-behavior: unset;
   }
 }
@@ -115,6 +115,10 @@ h2 {
     text-decoration: none;
     cursor: pointer;
     transition: all 0.5s ease;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: unset;
+    }
   }
 
   &:focus-visible {
@@ -126,6 +130,10 @@ h2 {
       color: var(--background);
       background-color: var(--text);
       transition: all 0.5s ease;
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: unset;
+      }
     }
   }
 
@@ -198,6 +206,16 @@ PAGE ANIMATIONS
 
 .page-leave-active {
   animation: bounce-out 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active {
+    animation-play-state: paused;
+  }
+
+  .page-leave-active {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes bounce-in {

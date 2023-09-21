@@ -128,6 +128,11 @@ export default {};
 
     path {
       fill: var(--text);
+
+      .contrast-theme & {
+        stroke: var(--text);
+        stroke-width: 1;
+      }
     }
 
     @media (max-width: 1100px) {
@@ -159,6 +164,12 @@ a.nuxt-link-exact-active {
   }
 
   @media (prefers-contrast: more) {
+    text-decoration: underline;
+    text-decoration-thickness: 0.3rem;
+    text-underline-offset: 0.5rem;
+  }
+
+  .contrast-theme & {
     text-decoration: underline;
     text-decoration-thickness: 0.3rem;
     text-underline-offset: 0.5rem;

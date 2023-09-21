@@ -204,6 +204,10 @@ export default {};
     align-self: flex-start;
     filter: blur(10px);
 
+    .contrast-theme & {
+      filter: blur(0);
+    }
+
     @media (max-width: 900px) {
       align-self: center;
     }

@@ -91,7 +91,7 @@ export default {
   border-radius: 1px;
   right: 6rem;
   //Pull the container up the height of the buttons
-  transform: translateY(-350%);
+  transform: translateY(-300%);
 
   @media (max-width: 1100px) {
     right: clamp(1.5rem, 5vw, 14rem);
@@ -109,11 +109,19 @@ export default {
     font-family: inherit;
     font-weight: inherit;
     border: var(--border);
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: unset;
+    }
   }
 
   .main-button {
     box-shadow: var(--box-shadow);
     background: var(--background-gradient);
+
+    .contrast-theme & {
+      background: #efefef;
+    }
   }
 
   .theme-button {
@@ -127,6 +135,8 @@ export default {
         hsl(var(--hue) calc(var(--saturation) / 2) 95%)
       );
       color: hsl(var(--hue) var(--saturation) 10%);
+      font-weight: 330;
+      --border: 0.1rem solid var(--text);
     }
 
     &--dark {
@@ -138,6 +148,8 @@ export default {
         hsl(calc(var(--hue) - 180) var(--saturation) 2%)
       );
       color: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
+      font-weight: 330;
+      --border: 0.1rem solid var(--text);
     }
 
     &--contrast {
