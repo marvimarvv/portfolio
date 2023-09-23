@@ -90,6 +90,16 @@ export default {
       fill: currentColor;
       font-size: 15px;
       word-spacing: 0.8px;
+
+      .contrast-theme & {
+        font-size: 14.3px;
+      }
+
+      // Correct for font-size differences between Safari and other browsers
+      @supports (-webkit-hyphens: none) {
+        font-size: 14.6px;
+        word-spacing: 0.9px;
+      }
     }
 
     path {
