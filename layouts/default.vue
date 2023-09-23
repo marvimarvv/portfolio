@@ -92,11 +92,17 @@ export default {
   right: 6rem;
   //Pull the container up the height of the buttons
   transform: translateY(-300%);
+  pointer-events: none;
 
   @media (max-width: 1100px) {
     right: clamp(1.5rem, 5vw, 14rem);
     // Section padding plus menu bar
     bottom: calc(clamp(1.5rem, 5vw, 14rem) + 101px);
+  }
+
+  @media (max-width: 480px) {
+    // Section padding plus menu bar
+    bottom: calc(clamp(1.5rem, 5vw, 14rem) + 73px);
   }
 
   button {
@@ -109,6 +115,8 @@ export default {
     font-family: inherit;
     font-weight: inherit;
     border: var(--border);
+    border-radius: 50%;
+    pointer-events: auto;
 
     @media (prefers-reduced-motion: reduce) {
       transition: unset;

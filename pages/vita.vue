@@ -56,7 +56,7 @@
       <li class="timeline__left timeline__left--3">
         <h2 class="timeline__heading mb-s">Gymnasium Wentorf - Abitur</h2>
         <p class="timeline__text">
-          Gradated in 2015 with the Abitur and an emphasis on languages:
+          Graduated in 2015 with the Abitur and an emphasis on languages:
           English, French & Spanish.
         </p>
       </li>
