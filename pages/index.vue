@@ -99,6 +99,11 @@ export default {
       @supports (-webkit-hyphens: none) {
         font-size: 14.6px;
         word-spacing: 0.9px;
+
+        .contrast-theme & {
+          font-size: 14px;
+          word-spacing: 0.2px;
+        }
       }
     }
 
