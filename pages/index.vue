@@ -44,12 +44,31 @@ export default {
   mounted() {
     this.$particles();
   },
-
+  data() {
+    return {
+      title: "Marvin Tandler | 💻",
+      description:
+        "Portfolio of UX & UI Designer and Frontend Developer Marvin Tandler",
+      keywords:
+        "Marvin Tandler, UX, UI, Frontend Designer, Developer, Designer, Portfolio, Webdesign, Web, Design, Webdesigner, Webdeveloper, Webentwickler, Webentwicklung",
+      pageUrl: "https://marvintandler.com/",
+    };
+  },
   head() {
     return {
+      title: this.title,
       meta: [
-        { hid: "description", name: "description", content: this.description },
-        { hid: "og:title", property: "og:title", content: this.pageTitle },
+        {
+          hid: "description",
+          name: "description",
+          content: this.description,
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: this.keywords,
+        },
+        { hid: "og:title", property: "og:title", content: this.title },
         { hid: "og:url", property: "og:url", content: this.pageUrl },
         {
           hid: "og:description",
@@ -59,14 +78,14 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: process.env.baseUrl + "marvintandler.png",
+          content: "https://marvintandler.com/marvintandler.png",
         },
 
         // twitter card
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: this.pageTitle,
+          content: this.title,
         },
         { hid: "twitter:url", name: "twitter:url", content: this.pageUrl },
         {
@@ -77,7 +96,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: process.env.baseUrl + "marvintandler.png",
+          content: "https://marvintandler.com/marvintandler.png",
         },
       ],
     };

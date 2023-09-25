@@ -17,12 +17,15 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
+        /* Set the head id to make it overridable by page specific ones */
+        hid: "description",
         name: "description",
         content:
           "Portfolio of UX & UI Designer and Frontend Developer Marvin Tandler",
       },
       { name: "author", content: "Marvin Tandler" },
       {
+        hid: "keywords",
         name: "keywords",
         content:
           "Marvin Tandler, UX, UI, Frontend Designer, Developer, Designer, Portfolio, Webdesign, Web, Design, Webdesigner, Webdeveloper, Webentwickler, Webentwicklung",

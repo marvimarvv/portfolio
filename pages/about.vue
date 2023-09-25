@@ -68,21 +68,30 @@
 import Profile from "~/components/profile.vue";
 
 export default {
-  head() {
+  data() {
     return {
       title: "Marvin Tandler | About me",
+      description: "Learn more about me and my career",
+      keywords:
+        "marvin tandler biography, ui design, frontend design, marvin tandler cv, marvin tandler portrait",
+      pageUrl: "https://marvintandler.com/about",
+    };
+  },
+  head() {
+    return {
+      title: this.title,
       meta: [
         {
+          hid: "description",
           name: "description",
-          content: "Learn more about me and my career",
+          content: this.description,
         },
         {
+          hid: "keywords",
           name: "keywords",
-          content:
-            "marvin tandler biography, ui design, frontend design, marvin tandler cv, marvin tandler portrait",
+          content: this.keywords,
         },
-        { hid: "description", name: "description", content: this.description },
-        { hid: "og:title", property: "og:title", content: this.pageTitle },
+        { hid: "og:title", property: "og:title", content: this.title },
         { hid: "og:url", property: "og:url", content: this.pageUrl },
         {
           hid: "og:description",
@@ -92,14 +101,14 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: process.env.baseUrl + "marvintandler.png",
+          content: "https://marvintandler.com/marvintandler.png",
         },
 
         // twitter card
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: this.pageTitle,
+          content: this.title,
         },
         { hid: "twitter:url", name: "twitter:url", content: this.pageUrl },
         {
@@ -110,7 +119,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: process.env.baseUrl + "marvintandler.png",
+          content: "https://marvintandler.com/marvintandler.png",
         },
       ],
     };

@@ -175,22 +175,31 @@
 
 <script>
 export default {
-  head() {
+  data() {
     return {
       title: "Marvin Tandler | Skills",
+      description:
+        "This is the site where I present my skills and show what I'm passionate about",
+      keywords:
+        "marvin tandler skills, ui design, frontend design, accessibility, html, css, nextjs, nuxtjs, jamstack",
+      pageUrl: "https://marvintandler.com/skills",
+    };
+  },
+  head() {
+    return {
+      title: this.title,
       meta: [
         {
+          hid: "description",
           name: "description",
-          content:
-            "This is the site where I present my skills and show what I'm passionate about",
+          content: this.description,
         },
         {
+          hid: "keywords",
           name: "keywords",
-          content:
-            "marvin tandler skills, ui design, frontend design, accessibility, html, css, nextjs, nuxtjs, jamstack",
+          content: this.keywords,
         },
-        { hid: "description", name: "description", content: this.description },
-        { hid: "og:title", property: "og:title", content: this.pageTitle },
+        { hid: "og:title", property: "og:title", content: this.title },
         { hid: "og:url", property: "og:url", content: this.pageUrl },
         {
           hid: "og:description",
@@ -200,14 +209,14 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: process.env.baseUrl + "marvintandler.png",
+          content: "https://marvintandler.com/marvintandler.png",
         },
 
         // twitter card
         {
           hid: "twitter:title",
           name: "twitter:title",
-          content: this.pageTitle,
+          content: this.title,
         },
         { hid: "twitter:url", name: "twitter:url", content: this.pageUrl },
         {
@@ -218,7 +227,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: process.env.baseUrl + "marvintandler.png",
+          content: "https://marvintandler.com/marvintandler.png",
         },
       ],
     };
