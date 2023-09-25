@@ -174,7 +174,56 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Marvin Tandler | Skills",
+      meta: [
+        {
+          name: "description",
+          content:
+            "This is the site where I present my skills and show what I'm passionate about",
+        },
+        {
+          name: "keywords",
+          content:
+            "marvin tandler skills, ui design, frontend design, accessibility, html, css, nextjs, nuxtjs, jamstack",
+        },
+        { hid: "description", name: "description", content: this.description },
+        { hid: "og:title", property: "og:title", content: this.pageTitle },
+        { hid: "og:url", property: "og:url", content: this.pageUrl },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.description,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: process.env.baseUrl + "marvintandler.png",
+        },
+
+        // twitter card
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.pageTitle,
+        },
+        { hid: "twitter:url", name: "twitter:url", content: this.pageUrl },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.description,
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: process.env.baseUrl + "marvintandler.png",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -313,7 +362,7 @@ export default {};
         top: 0%;
       }
 
-      @media (min-width: 901px) {
+      @media (min-width: 1101px) {
         &::after,
         &::before {
           font-size: 35rem;

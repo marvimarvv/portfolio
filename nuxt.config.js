@@ -17,9 +17,15 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: "description",
         name: "description",
-        content: process.env.npm_package_description || "",
+        content:
+          "Portfolio of UX & UI Designer and Frontend Developer Marvin Tandler",
+      },
+      { name: "author", content: "Marvin Tandler" },
+      {
+        name: "keywords",
+        content:
+          "Marvin Tandler, UX, UI, Frontend Designer, Developer, Designer, Portfolio, Webdesign, Web, Design, Webdesigner, Webdeveloper, Webentwickler, Webentwicklung",
       },
     ],
     link: [{ rel: "icon", type: "image/png", href: "./favicon.png" }],

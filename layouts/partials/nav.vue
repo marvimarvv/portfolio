@@ -39,7 +39,7 @@
           </nuxt-link>
         </li>
         <li class="nav__item">
-          <nuxt-link class="nav__link" data-toggle="tab" to="vita">
+          <nuxt-link class="nav__link" data-toggle="tab" to="about">
             <svg
               class="nav__icon"
               width="24"

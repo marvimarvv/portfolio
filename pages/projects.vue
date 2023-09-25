@@ -34,12 +34,47 @@ import Card from "~/components/card.vue";
 export default {
   head() {
     return {
-      title: "My private projects",
+      title: "Marvin Tandler | Projects",
       meta: [
-        { name: "description", content: "This is my projects page." },
+        {
+          name: "description",
+          content: "This is the site where I list all my projects",
+        },
         {
           name: "keywords",
-          content: "private projects, marvin tandler projects",
+          content:
+            "private projects, marvin tandler projects, ui design, frontend design",
+        },
+        { hid: "description", name: "description", content: this.description },
+        { hid: "og:title", property: "og:title", content: this.pageTitle },
+        { hid: "og:url", property: "og:url", content: this.pageUrl },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.description,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: process.env.baseUrl + "marvintandler.png",
+        },
+
+        // twitter card
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.pageTitle,
+        },
+        { hid: "twitter:url", name: "twitter:url", content: this.pageUrl },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.description,
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          content: process.env.baseUrl + "marvintandler.png",
         },
       ],
     };
