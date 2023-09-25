@@ -178,8 +178,7 @@ export default {
   data() {
     return {
       title: "Marvin Tandler | Skills",
-      description:
-        "This is the site where I present my skills and show what I'm passionate about",
+      description: "Learn more about my skills and what I'm passionate about",
       keywords:
         "marvin tandler skills, ui design, frontend design, accessibility, html, css, nextjs, nuxtjs, jamstack",
       pageUrl: "https://marvintandler.com/skills",

@@ -48,7 +48,7 @@ export default {
     return {
       title: "Marvin Tandler | 💻",
       description:
-        "Portfolio of UX & UI Designer and Frontend Developer Marvin Tandler",
+        "Come and explore the site of UX/UI Designer and Frontend Developer Marvin Tandler",
       keywords:
         "Marvin Tandler, UX, UI, Frontend Designer, Developer, Designer, Portfolio, Webdesign, Web, Design, Webdesigner, Webdeveloper, Webentwickler, Webentwicklung",
       pageUrl: "https://marvintandler.com/",

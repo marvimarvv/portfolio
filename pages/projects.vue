@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       title: "Marvin Tandler | Projects",
-      description: "This is the site where I list all my projects",
+      description: "See what projects I've worked on",
       keywords:
         "private projects, marvin tandler projects, ui design, frontend design",
       pageUrl: "https://marvintandler.com/projects",
