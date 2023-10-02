@@ -33,6 +33,7 @@
       </div>
     </div>
     <div width="100%" height="100%" id="intro__particles"></div>
+    <div class="intro__particles-placeholder"></div>
     <nuxt-link class="intro__link" to="projects">
       <span class="intro__link-text"> View my projects </span>
     </nuxt-link>
@@ -278,5 +279,10 @@ export default {
   overflow: hidden;
   isolation: isolate;
   border-radius: var(--border-radius);
+}
+
+.intro__particles-placeholder {
+  grid-column: 3/6;
+  grid-row: 4/7;
 }
 </style>
