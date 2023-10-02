@@ -108,7 +108,7 @@ export default {
 .intro {
   display: grid;
   grid-template-columns: 0.5fr 1fr 4fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr max-content;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
   max-width: 100rem;
   margin: auto;
   // Avoid scrollbar bc of rotating circles on some screens
