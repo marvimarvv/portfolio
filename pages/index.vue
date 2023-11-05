@@ -11,26 +11,6 @@
           </text>
         </svg>
       </div>
-      <div class="intro__circular-text intro__circular-text--2">
-        <svg viewBox="0 0 100 100">
-          <path d="M0,50 a50,50 0 1,1 0,1z" id="circle"></path>
-          <text>
-            <textPath xlink:href="#circle">
-              Marvin Tandler Marvin Tandler Marvin Tandler
-            </textPath>
-          </text>
-        </svg>
-      </div>
-      <div class="intro__circular-text intro__circular-text--3">
-        <svg viewBox="0 0 100 100">
-          <path d="M0,50 a50,50 0 1,1 0,1z" id="circle"></path>
-          <text>
-            <textPath xlink:href="#circle">
-              Marvin Tandler Marvin Tandler Marvin Tandler
-            </textPath>
-          </text>
-        </svg>
-      </div>
     </div>
     <div width="100%" height="100%" id="intro__particles"></div>
     <div class="intro__particles-placeholder"></div>
@@ -177,26 +157,8 @@ export default {
       animation: rotate 20s linear infinite;
     }
 
-    &--2 {
-      width: clamp(18rem, 25vw, 45rem);
-      height: clamp(18rem, 25vw, 45rem);
-      top: 50%;
-      left: 30%;
-      animation: rotate 20s linear infinite reverse;
-    }
-
-    &--3 {
-      width: clamp(7rem, 8vw, 20rem);
-      height: clamp(7rem, 8vw, 20rem);
-      top: 10%;
-      left: 90%;
-      animation: rotate 20s linear infinite;
-    }
-
     @media (prefers-reduced-motion: reduce) {
-      &--1,
-      &--2,
-      &--3 {
+      &--1 {
         animation-play-state: paused;
       }
     }

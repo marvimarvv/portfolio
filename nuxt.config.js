@@ -59,14 +59,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ["nuxt-gsap-module", "@nuxt/image"],
-
-  gsap: {
-    extraPlugins: {
-      scrollTo: true,
-      scrollTrigger: true,
-    },
-  },
+  buildModules: ["@nuxt/image"],
   /*
    ** Nuxt.js modules
    */

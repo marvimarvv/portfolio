@@ -1,7 +1,12 @@
 <template>
   <article class="card">
     <a class="card__link" :href="siteLink" target="blank">
-      <nuxt-picture :src="imageLink" class="card__image" :alt="alt" />
+      <nuxt-picture
+        :src="imageLink"
+        class="card__image"
+        :alt="alt"
+        placeholder
+      />
       <div class="card__body">
         <h2 class="card__heading">{{ heading }}</h2>
         <ul class="card__list">

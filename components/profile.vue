@@ -4,6 +4,7 @@
       src="marvintandler.png"
       alt="Photo of Marvin Tandler"
       class="profile__picture"
+      placeholder
     />
     <div class="profile__picture-overlay"></div>
     <div class="profile__quotation-bg"></div>
