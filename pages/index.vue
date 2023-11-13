@@ -112,8 +112,30 @@ export default {
     grid-row: 2/5;
     border-radius: var(--border-radius);
     border: var(--border);
-    background-color: var(--background);
     position: relative;
+    background-size: 3px 3px;
+    background-image: linear-gradient(
+      45deg,
+      var(--text) 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
+    animation: background-size alternate 7s linear infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation-play-state: paused;
+    }
+
+    @keyframes background-size {
+      0% {
+        background-size: 1px 1px;
+      }
+      100% {
+        background-size: 5px 5px;
+      }
+    }
   }
 
   &__circular-text {

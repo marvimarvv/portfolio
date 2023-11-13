@@ -65,26 +65,12 @@ export default {
     grid-row: 2/4;
     grid-column: 1/4;
     background-image: radial-gradient(
-      var(--brand) 0,
-      rgba(var(--background), 0.8) 30%,
-      var(--brand) 50%,
-      rgba(var(--background), 0.8) 75%,
-      var(--brand) 100%
+      circle at 100%,
+      transparent,
+      transparent 50%,
+      hsla(var(--hue), calc(var(--saturation) / 4), 70%, 0.6) 75%,
+      transparent 75%
     );
-    background-size: 300% 300%;
-    animation: gradient 35s linear infinite alternate-reverse;
-
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 150% 150%;
-      }
-      100% {
-        background-position: 0% 0%;
-      }
-    }
   }
 
   &__quotation {
