@@ -45,16 +45,18 @@ export default {
     max-height: 40vh;
     aspect-ratio: 1/1;
     border: var(--border);
+    filter: grayscale(0.5) contrast(1.3);
+    overflow: hidden;
 
     &-overlay {
       // Create new stacking context to be in same one as the image
       isolation: isolate;
       grid-row: 1/3;
       grid-column: 2/3;
-      background-color: rgba(var(--brand), 0.15);
+      background-color: var(--brand);
       max-height: 40vh;
       aspect-ratio: 1/1;
-      border-radius: var(--border-radius);
+      opacity: 0.1;
     }
   }
 
@@ -64,13 +66,23 @@ export default {
     border-radius: var(--border-radius);
     grid-row: 2/4;
     grid-column: 1/4;
-    background-image: radial-gradient(
-      circle at 100%,
+    background-image: repeating-radial-gradient(
+      circle closest-side,
       transparent,
       transparent 50%,
       hsla(var(--hue), calc(var(--saturation) / 4), 70%, 0.6) 75%,
       transparent 75%
     );
+    background-size: 100%;
+    transition: background-size 3s ease-in-out;
+
+    @media (prefers-reduced-motion: no-preference) {
+      @media (pointer: fine) and (hover: hover) {
+        &:hover {
+          background-size: 10%;
+        }
+      }
+    }
   }
 
   &__quotation {
