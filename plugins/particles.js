@@ -57,6 +57,7 @@ P = 0.225,
   function init() {
     container = document.getElementById("intro__particles");
     canvas = document.createElement("canvas");
+    canvas.ariaLabel = "Moving particles on a rectangular grid";
 
     ctx = canvas.getContext("2d");
     man = false;
