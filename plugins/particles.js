@@ -141,8 +141,10 @@ P = 0.225,
     requestAnimationFrame(step);
   }
 
-  init();
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    step();
-  }
+  setTimeout(() => {
+    init();
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      step();
+    }
+  }, 0);
 };

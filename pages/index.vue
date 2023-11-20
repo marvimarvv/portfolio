@@ -136,7 +136,7 @@ export default {
         background-size: 1px 1px;
       }
       100% {
-        background-size: 5px 5px;
+        background-size: 3px 3px;
       }
     }
   }
