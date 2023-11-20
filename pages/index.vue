@@ -91,9 +91,12 @@ export default {
   grid-template-columns: 0.5fr 1fr 4fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
   max-width: 100rem;
-  margin: auto;
   // Avoid scrollbar bc of rotating circles on some screens
   overflow: hidden;
+  // Reduce intial layout shift
+  width: 100%;
+  height: 100%;
+  align-self: center;
 
   @media (min-width: 1101px) {
     padding-top: 0;
