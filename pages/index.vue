@@ -234,6 +234,10 @@ export default {
   overflow: hidden;
   isolation: isolate;
   border-radius: var(--border-radius);
+
+  @media (max-width: 600px) {
+    grid-column: 2/6;
+  }
 }
 
 .intro__particles-placeholder {
