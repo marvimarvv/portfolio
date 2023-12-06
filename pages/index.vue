@@ -1,17 +1,14 @@
 <template>
   <section class="intro">
-    <div width="100%" height="100%" class="intro__artboard">
-      <div class="intro__circular-text intro__circular-text--1">
-        <svg viewBox="0 0 100 100">
-          <path d="M0,50 a50,50 0 1,1 0,1z" id="circle"></path>
-          <text>
-            <textPath xlink:href="#circle">
-              Marvin Tandler Marvin Tandler Marvin Tandler
-            </textPath>
-          </text>
-        </svg>
-      </div>
-    </div>
+    <span class="intro__name intro__name--01">
+      <span>M</span><span>A</span><span>R</span> <span>V</span><span>I</span
+      ><span>N</span>
+    </span>
+    <span class="intro__name intro__name--02">TAND</span>
+    <span class="intro__name intro__name--03">
+      LER
+      <div width="100%" height="100%" class="intro__artboard"></div>
+    </span>
     <div width="100%" height="100%" id="intro__particles"></div>
     <div class="intro__particles-placeholder"></div>
     <nuxt-link class="intro__link" to="projects">
@@ -88,10 +85,8 @@ export default {
 <style lang="scss">
 .intro {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 4fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
-  max-width: 100rem;
-  // Avoid scrollbar bc of rotating circles on some screens
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   overflow: hidden;
   // Reduce intial layout shift
   width: 100%;
@@ -103,16 +98,47 @@ export default {
     padding-bottom: 6rem;
   }
 
-  &__title {
-    grid-column: 1/-1;
-    grid-row: 1/3;
-    align-self: center;
-    isolation: isolate;
+  &__name {
+    font-size: clamp(7rem, 14vw, 24rem);
+    line-height: 1;
+    color: white;
+
+    &--01 {
+      grid-column: 1/4;
+      grid-row: 1/3;
+
+      @media (max-width: 600px) {
+        grid-row: 2/4;
+      }
+    }
+
+    &--02 {
+      grid-column: 4/8;
+      grid-row: 4/6;
+      align-self: end;
+      z-index: 1;
+
+      @media (max-width: 600px) {
+        grid-column: 3/8;
+      }
+    }
+
+    &--03 {
+      grid-column: 4/8;
+      grid-row: 6/8;
+      white-space: nowrap;
+      z-index: 1;
+
+      @media (max-width: 600px) {
+        grid-column: 3/8;
+      }
+    }
   }
 
   &__artboard {
-    grid-column: 2/4;
-    grid-row: 2/5;
+    display: inline-block;
+    width: 1.9ex;
+    aspect-ratio: 1 / 1;
     border-radius: var(--border-radius);
     border: var(--border);
     position: relative;
@@ -126,6 +152,7 @@ export default {
       #000
     );
     animation: background-size alternate 7s linear infinite;
+    margin-left: calc(max(2vw, 15px) * -1);
 
     @media (prefers-reduced-motion: reduce) {
       animation-play-state: paused;
@@ -141,70 +168,11 @@ export default {
     }
   }
 
-  &__circular-text {
-    position: absolute;
-
-    svg {
-      display: block;
-      overflow: visible;
-    }
-
-    text {
-      fill: currentColor;
-      font-size: 15px;
-      word-spacing: 0.8px;
-
-      .contrast-theme & {
-        font-size: 14.3px;
-      }
-
-      // Correct for font-size differences between Safari and other browsers
-      @supports (-webkit-hyphens: none) {
-        font-size: 14.6px;
-        word-spacing: 0.9px;
-
-        .contrast-theme & {
-          font-size: 14px;
-          word-spacing: 0.2px;
-        }
-      }
-    }
-
-    path {
-      fill: none;
-    }
-
-    &--1 {
-      width: clamp(10rem, 15vw, 30rem);
-      height: clamp(10rem, 15vw, 30rem);
-      top: -10%;
-      left: -10%;
-      animation: rotate 20s linear infinite;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      &--1 {
-        animation-play-state: paused;
-      }
-    }
-
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  }
-
   &__link {
     grid-column: 1/-1;
-    grid-row: 7/-1;
+    grid-row: 8/9;
     justify-self: start;
     align-self: end;
-    margin-top: 3rem;
     text-decoration: none;
     padding: 8px 12px;
     color: #201e1e;
@@ -260,8 +228,8 @@ export default {
 }
 
 #intro__particles {
-  grid-column: 3/6;
-  grid-row: 4/7;
+  grid-column: 2/5;
+  grid-row: 3/7;
   background-color: rgba(20, 20, 20, 0.7);
   overflow: hidden;
   isolation: isolate;
