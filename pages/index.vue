@@ -101,7 +101,7 @@ export default {
   &__name {
     font-size: clamp(7rem, 14vw, 24rem);
     line-height: 1;
-    color: white;
+    color: var(--heading-color);
 
     &--01 {
       grid-column: 1/4;

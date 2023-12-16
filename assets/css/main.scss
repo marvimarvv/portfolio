@@ -82,6 +82,7 @@ h1 {
   font-weight: var(--font-weight-normal);
   font-size: clamp(3rem, 4vw, 8rem);
   line-height: 1.4;
+  color: var(--heading-color);
 }
 
 h2 {
@@ -163,7 +164,7 @@ UTILITY CLASSES
 }
 
 .mb-l {
-  margin-bottom: 3rem;
+  margin-bottom: clamp(1.5rem, 5vw, 3rem);
 }
 
 .mb-xl {

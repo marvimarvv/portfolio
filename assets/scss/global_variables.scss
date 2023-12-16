@@ -1,37 +1,32 @@
 :root {
+  color-scheme: dark light;
+
   --font-primary: "Josefin Sans", sans-serif;
   --font-weight-normal: 330;
   --font-weight-bold: 500;
-
-  color-scheme: dark light;
-
-  --border-radius: 1px;
 
   /* destructure brand channels */
   --hue: 6;
   --saturation: 98%;
   --lightness: 82%;
 
-  /* build colors with props */
   --brand: hsl(var(--hue) var(--saturation) var(--lightness));
-
   --accent: hsl(var(--hue) var(--saturation) 65%);
-
   /* very dark version of the brand color */
-  --text: hsl(var(--hue) var(--saturation) 10%); /* lower is darker */
-
+  --text: hsl(var(--hue) var(--saturation) 10%);
+  --heading-color: hsl(var(--hue) var(--saturation) 10%);
   /* very bright brand white */
-  --background: hsl(
-    var(--hue) calc(var(--saturation) / 2) 95%
-  ); /* higher is lighter */
+  --background: hsl(var(--hue) calc(var(--saturation) / 2) 95%);
   --background-gradient: conic-gradient(
     from 3.1416rad at 0% 50%,
     rgba(254, 173, 166, 0.6),
     var(--background)
   );
+  --particles-background: hsla(var(--hue), var(--saturation), 90%, 0.7);
 
   --box-shadow: var(--text) 0px 25px 50px -12px;
   --border: 0.1rem solid var(--text);
+  --border-radius: 1px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +35,7 @@
 
   :root {
     --text: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
+    --heading-color: hsl(var(--hue) var(--saturation) 100%);
     --background: hsl(calc(var(--hue) - 180) var(--saturation) 2%);
     --border: 0.1rem solid var(--text);
   }
@@ -48,6 +44,7 @@
 @media (prefers-contrast: more) {
   :root {
     --text: #222222;
+    --heading-color: #222222;
     --background: #efefef;
     --border: 0.3rem solid var(--text);
     --font-weight-normal: 450;
@@ -58,18 +55,21 @@
 
 .light-theme {
   --text: hsl(var(--hue) var(--saturation) 10%);
+  --heading-color: hsl(var(--hue) var(--saturation) 10%);
   --background: hsl(var(--hue) calc(var(--saturation) / 2) 95%);
   --border: 0.1rem solid var(--text);
 }
 
 .dark-theme {
   --text: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
+  --heading-color: hsl(var(--hue) var(--saturation) 100%);
   --background: hsl(calc(var(--hue) - 180) var(--saturation) 2%);
   --border: 0.1rem solid var(--text);
 }
 
 .contrast-theme {
   --text: #222222;
+  --heading-color: #222222;
   --background: #efefef;
   --border: 0.3rem solid var(--text);
   --font-weight-normal: 450;
