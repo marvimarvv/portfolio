@@ -3,6 +3,17 @@
     <h1 class="mb-l">My private projects</h1>
     <div class="projects">
       <Card
+        siteLink="https://3elm.com"
+        heading="3elm - design and animation studio"
+        alt="Screenshot of the beginning of the website 3elm.com"
+        imageLink="/3elm.png"
+        :bulletPoints="[
+          'In Arabic and English',
+          'Built with Next.js',
+          'Custom SVG animations',
+        ]"
+      ></Card>
+      <Card
         siteLink="https://www.fusspflegetandler.de"
         heading="Fußpflege Heike Tandler"
         alt="Screenshot of the beginning of the website fusspflegetandler.de"
