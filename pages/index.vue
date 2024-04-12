@@ -108,7 +108,7 @@ export default {
       grid-row: 1/3;
 
       @media (max-width: 600px) {
-        grid-row: 2/4;
+        grid-row: 1/4;
       }
     }
 
@@ -117,10 +117,6 @@ export default {
       grid-row: 4/6;
       align-self: end;
       z-index: 1;
-
-      @media (max-width: 600px) {
-        grid-column: 3/8;
-      }
     }
 
     &--03 {
@@ -128,10 +124,6 @@ export default {
       grid-row: 6/8;
       white-space: nowrap;
       z-index: 1;
-
-      @media (max-width: 600px) {
-        grid-column: 3/8;
-      }
     }
   }
 
@@ -229,14 +221,14 @@ export default {
 
 #intro__particles {
   grid-column: 2/5;
-  grid-row: 3/7;
+  grid-row: 2/8;
   background-color: rgba(20, 20, 20, 0.7);
   overflow: hidden;
   isolation: isolate;
   border-radius: var(--border-radius);
 
   @media (max-width: 600px) {
-    grid-column: 2/6;
+    grid-column: 2/7;
   }
 }
 
