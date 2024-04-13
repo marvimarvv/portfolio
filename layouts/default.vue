@@ -2,23 +2,38 @@
   <main class="page-container">
     <Nav></Nav>
     <Nuxt />
-    <div class="floating-action-menu">
+    <div class="theme-switcher">
+      <ul class="theme-switcher__list" id="theme-switcher-id">
+        <li>
+          <button
+            @click="setTheme('contrast')"
+            class="theme-switcher__button theme-switcher__theme-button theme-switcher__theme-button--contrast"
+          >
+            Contrast
+          </button>
+        </li>
+        <li>
+          <button
+            @click="setTheme('dark')"
+            class="theme-switcher__button theme-switcher__theme-button theme-switcher__theme-button--dark"
+          >
+            Dark
+          </button>
+        </li>
+        <li>
+          <button
+            @click="setTheme('light')"
+            class="theme-switcher__button theme-switcher__theme-button theme-switcher__theme-button--light"
+          >
+            Light
+          </button>
+        </li>
+      </ul>
       <button
-        @click="setTheme('contrast')"
-        class="theme-button theme-button--contrast"
-      >
-        Contrast
-      </button>
-      <button @click="setTheme('dark')" class="theme-button theme-button--dark">
-        Dark
-      </button>
-      <button
-        @click="setTheme('light')"
-        class="theme-button theme-button--light"
-      >
-        Light
-      </button>
-      <button class="main-button">Theme Picker</button>
+        class="theme-switcher__button theme-switcher__main-button"
+        aria-expanded="false"
+        aria-controls="theme-switcher-id"
+      ></button>
     </div>
   </main>
 </template>
@@ -62,23 +77,35 @@ export default {
   }
 }
 
-.floating-action-menu {
+.theme-switcher {
+  //Keep it on top of the landing page content
+  z-index: 1;
+
   &:hover,
   &:focus-within {
-    .theme-button {
-      opacity: 1;
+    .theme-switcher__list {
+      visibility: visible;
 
-      &:hover,
-      &:focus-within {
-        scale: 1.1;
-        z-index: 1;
-      }
+      .theme-switcher__theme-button {
+        opacity: 1;
 
-      &--light,
-      &--dark,
-      &--contrast {
-        transform: translateY(0);
+        &:hover,
+        &:focus-within {
+          scale: 1.2;
+          position: relative;
+          z-index: 1;
+        }
+
+        &--light,
+        &--dark,
+        &--contrast {
+          transform: translateY(0);
+        }
       }
+    }
+
+    .theme-switcher__main-button::after {
+      content: "Close";
     }
   }
 
@@ -105,7 +132,15 @@ export default {
     bottom: calc(clamp(1.5rem, 5vw, 14rem) + 73px);
   }
 
-  button {
+  &__list {
+    visibility: hidden;
+
+    > li {
+      list-style-type: none;
+    }
+  }
+
+  &__button {
     border: none;
     color: var(--text);
     cursor: pointer;
@@ -123,23 +158,32 @@ export default {
     }
   }
 
-  .main-button {
+  &__main-button {
     box-shadow: var(--box-shadow);
     background: var(--background-gradient);
+    position: relative;
+
+    &::after {
+      content: "Theme Picker";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     .contrast-theme & {
       background: #efefef;
     }
   }
 
-  .theme-button {
+  &__theme-button {
     opacity: 0;
 
     &--light {
       transform: translateY(100%);
       background: conic-gradient(
         from 3.1416rad at 0% 50%,
-        rgba(254, 173, 166, 0.6),
+        rgb(254, 173, 166),
         hsl(var(--hue) calc(var(--saturation) / 2) 95%)
       );
       color: hsl(var(--hue) var(--saturation) 10%);
@@ -152,7 +196,7 @@ export default {
       transition-delay: 0.1s;
       background: conic-gradient(
         from 3.1416rad at 0% 50%,
-        rgba(254, 173, 166, 0.6),
+        rgb(254, 173, 166),
         hsl(calc(var(--hue) - 180) var(--saturation) 2%)
       );
       color: hsl(var(--hue) calc(var(--saturation) / 4) 70%);

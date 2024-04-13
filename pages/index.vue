@@ -117,6 +117,7 @@ export default {
       grid-row: 4/6;
       align-self: end;
       z-index: 1;
+      pointer-events: none;
     }
 
     &--03 {
@@ -124,6 +125,7 @@ export default {
       grid-row: 6/8;
       white-space: nowrap;
       z-index: 1;
+      pointer-events: none;
     }
   }
 

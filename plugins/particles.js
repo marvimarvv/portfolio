@@ -65,8 +65,8 @@ P = 0.225,
 
     list = [];
 
-    w = canvas.width = COLS * SPACING + MARGIN * 2;
-    h = canvas.height = ROWS * SPACING + MARGIN * 2;
+    w = canvas.width = container.clientWidth;
+    h = canvas.height = container.clientHeight;
 
     for (i = 0; i < NUM_PARTICLES; i++) {
       p = Object.create(particle);
@@ -91,6 +91,11 @@ P = 0.225,
     }
 
     container.appendChild(canvas);
+
+    window.addEventListener("resize", () => {
+      w = canvas.width = container.clientWidth;
+      h = canvas.height = container.clientHeight;
+    });
   }
 
   function step() {
