@@ -31,8 +31,20 @@ export default {
           "Marvin Tandler, UX, UI, Frontend Designer, Developer, Designer, Portfolio, Webdesign, Web, Design, Webdesigner, Webdeveloper, Webentwickler, Webentwicklung",
       },
     ],
-    link: [{ rel: "icon", type: "image/png", href: "./favicon.png" }],
-    link: [{ rel: "icon", type: "image/svg+xml", href: "./favicon.svg" }],
+    link: [
+      { rel: "icon", type: "image/png", href: "/favicons/favicon.png" },
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicons/favicon.svg",
+      },
+      {
+        rel: "apple-touch-icon",
+        type: "image/png",
+        size: "180x180",
+        href: "/favicons/apple-touch-icon.png",
+      },
+    ],
   },
   /*
    ** Global CSS
