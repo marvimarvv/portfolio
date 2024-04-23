@@ -76,12 +76,17 @@ export default {
     background-size: 100%;
     transition: background-size 3s ease-in-out;
 
-    @media (prefers-reduced-motion: no-preference) {
-      @media (pointer: fine) and (hover: hover) {
-        &:hover {
-          background-size: 10%;
-        }
+    @keyframes backgroundSize {
+      0% {
+        background-size: 100%;
       }
+      100% {
+        background-size: 10%;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: backgroundSize 30s ease-in-out infinite alternate;
     }
   }
 

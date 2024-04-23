@@ -1,13 +1,12 @@
 import Vue from "vue";
 
 Vue.prototype.$particles = function particles() {
-  var ROWS = 300;
-  var COLS = 300;
-  var NUM_PARTICLES = ROWS * COLS,
+  var ROWS = 0,
+    COLS = 0,
+    NUM_PARTICLES = ROWS * COLS,
     THICKNESS = Math.pow(80, 2),
     SPACING = 3,
     MARGIN = 0,
-    COLOR = 220,
     DRAG = 0.95,
     EASE = 0.25,
     /*
@@ -42,10 +41,29 @@ P = 0.225,
     n,
     w,
     h,
-    p,
-    s,
-    r,
-    c;
+    p;
+
+  // Get the current value of the --heading-color CSS variable which is a contrasting color to the background
+  let colorVariable = getComputedStyle(
+    document.documentElement
+  ).getPropertyValue("--heading-color");
+
+  // Extract the lightness value from the hsl color
+  let hslRegex = /hsl\(\d+ \d+% (\d+)%\)/;
+  let match = colorVariable.match(hslRegex);
+  let lightness;
+
+  // Set the color based on the lightness value
+  if (match) {
+    lightness = parseInt(match[1], 10);
+    if (lightness < 50) {
+      var COLOR = 20;
+    } else {
+      var COLOR = 220;
+    }
+  } else {
+    console.log("colorVariable does not match hslRegex:", colorVariable);
+  }
 
   particle = {
     vx: 0,
@@ -67,6 +85,11 @@ P = 0.225,
 
     w = canvas.width = container.clientWidth;
     h = canvas.height = container.clientHeight;
+
+    ROWS = h / SPACING;
+    COLS = w / SPACING;
+
+    NUM_PARTICLES = ROWS * COLS;
 
     for (i = 0; i < NUM_PARTICLES; i++) {
       p = Object.create(particle);
@@ -96,6 +119,26 @@ P = 0.225,
       w = canvas.width = container.clientWidth;
       h = canvas.height = container.clientHeight;
     });
+
+    const html = document.querySelector("html");
+
+    // Function to update background color based on class
+    function updateColor() {
+      if (html.classList.contains("light-theme")) {
+        COLOR = 20;
+      } else if (html.classList.contains("dark-theme")) {
+        COLOR = 220;
+      } else if (html.classList.contains("contrast-theme")) {
+        COLOR = 20;
+      }
+      console.log("updateColor ran");
+    }
+
+    // Create a MutationObserver instance
+    let observer = new MutationObserver(updateColor);
+
+    // Start observing the target element for configured mutations
+    observer.observe(html, { attributes: true, attributeFilter: ["class"] });
   }
 
   function step() {

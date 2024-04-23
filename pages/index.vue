@@ -222,9 +222,8 @@ export default {
 }
 
 #intro__particles {
-  grid-column: 2/5;
+  grid-column: 1/5;
   grid-row: 2/8;
-  background-color: rgba(20, 20, 20, 0.7);
   overflow: hidden;
   isolation: isolate;
   border-radius: var(--border-radius);

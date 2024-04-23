@@ -99,6 +99,7 @@ export default {
     margin-top: auto;
     margin-bottom: 1.8rem;
     padding-left: 2rem;
+    list-style-type: square;
   }
 }
 </style>
