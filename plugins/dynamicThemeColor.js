@@ -1,4 +1,4 @@
-export default function () {
+export default defineNuxtPlugin(() => {
   if (process.client) {
     let element = document.documentElement;
     let cssValue = getComputedStyle(element)
@@ -17,4 +17,4 @@ export default function () {
     // Set the theme color
     metaThemeColor.setAttribute("content", cssValue);
   }
-}
+});

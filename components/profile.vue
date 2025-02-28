@@ -36,7 +36,7 @@ export default {
   }
 
   &__picture {
-    // Create new stacking context to overlay background
+    /* Create new stacking context to overlay background */
     isolation: isolate;
     grid-row: 1/3;
     grid-column: 2/3;
@@ -49,7 +49,7 @@ export default {
     overflow: hidden;
 
     &-overlay {
-      // Create new stacking context to be in same one as the image
+      /* Create new stacking context to be in same one as the image */
       isolation: isolate;
       grid-row: 1/3;
       grid-column: 2/3;

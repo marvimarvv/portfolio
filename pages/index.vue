@@ -26,7 +26,7 @@ export default {
     return {
       title: "Marvin Tandler | 💻",
       description:
-        "Come and explore the site of UX/UI Designer and Frontend Developer Marvin Tandler",
+        "Come and explore the site of UX/UI Designer and Frontend Developer Marvin Tandler. Here you can find his portfolio and projects.",
       keywords:
         "Marvin Tandler, UX, UI, Frontend Designer, Developer, Designer, Portfolio, Webdesign, Web, Design, Webdesigner, Webdeveloper, Webentwickler, Webentwicklung",
       pageUrl: "https://marvintandler.com/",
@@ -88,7 +88,7 @@ export default {
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(8, 1fr);
   overflow: hidden;
-  // Reduce intial layout shift
+  /* Reduce intial layout shift */
   width: 100%;
   height: 100%;
   align-self: center;

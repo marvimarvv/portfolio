@@ -1,7 +1,7 @@
 <template>
   <main class="page-container">
     <Nav></Nav>
-    <Nuxt />
+    <slot />
     <div class="theme-switcher">
       <ul class="theme-switcher__list" id="theme-switcher-id">
         <li>
@@ -78,7 +78,7 @@ export default {
 }
 
 .theme-switcher {
-  //Keep it on top of the landing page content
+  /* Keep it on top of the landing page content */
   z-index: 1;
 
   &:hover,
@@ -117,18 +117,18 @@ export default {
   height: 7rem;
   border-radius: 1px;
   right: 6rem;
-  //Pull the container up the height of the buttons
+  /* Pull the container up the height of the buttons */
   transform: translateY(-300%);
   pointer-events: none;
 
   @media (max-width: 1100px) {
     right: clamp(1.5rem, 5vw, 14rem);
-    // Section padding plus menu bar
+    /* Section padding plus menu bar */
     bottom: calc(clamp(1.5rem, 5vw, 14rem) + 101px);
   }
 
   @media (max-width: 480px) {
-    // Section padding plus menu bar
+    /* Section padding plus menu bar */
     bottom: calc(clamp(1.5rem, 5vw, 14rem) + 73px);
   }
 
