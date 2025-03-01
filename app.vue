@@ -1,9 +1,18 @@
 <template>
   <main class="page-container">
     <Nav></Nav>
-    <slot />
+    <NuxtPage
+      :transition="{
+        name: 'page',
+        mode: 'out-in',
+      }"
+    />
     <div class="theme-switcher">
-      <ul class="theme-switcher__list" id="theme-switcher-id">
+      <ul
+        class="theme-switcher__list"
+        id="theme-switcher-id"
+        :style="{ visibility: isThemeSwitcherOpen ? 'visible' : 'hidden' }"
+      >
         <li>
           <button
             @click="setTheme('contrast')"
@@ -31,18 +40,25 @@
       </ul>
       <button
         class="theme-switcher__button theme-switcher__main-button"
-        aria-expanded="false"
+        :aria-expanded="isThemeSwitcherOpen"
         aria-controls="theme-switcher-id"
+        @click="toggleThemeSwitcher"
       ></button>
     </div>
   </main>
 </template>
 
 <script>
-import Nav from "./partials/nav";
+import Nav from "./layouts/partials/nav.vue";
+
 export default {
   components: {
     Nav,
+  },
+  data() {
+    return {
+      isThemeSwitcherOpen: false,
+    };
   },
   methods: {
     setTheme(theme) {
@@ -56,11 +72,38 @@ export default {
       // Add the new theme class to the html element
       document.documentElement.classList.add(theme + "-theme");
     },
+    toggleThemeSwitcher() {
+      this.isThemeSwitcherOpen = !this.isThemeSwitcherOpen;
+    },
+    handleClickOutside(event) {
+      const themeSwitcher = document.querySelector(".theme-switcher");
+
+      if (!themeSwitcher.contains(event.target)) {
+        this.isThemeSwitcherOpen = false;
+      }
+    },
+  },
+  mounted() {
+    document.addEventListener("click", this.handleClickOutside);
+  },
+  beforeUnmount() {
+    document.removeEventListener("click", this.handleClickOutside);
   },
 };
 </script>
 
 <style lang="scss">
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(0.5rem);
+}
+
 .page-container {
   max-width: 140rem;
   margin: 0 auto;
@@ -102,10 +145,6 @@ export default {
           transform: translateY(0);
         }
       }
-    }
-
-    .theme-switcher__main-button::after {
-      content: "Close";
     }
   }
 

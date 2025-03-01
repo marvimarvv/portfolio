@@ -143,7 +143,6 @@ section {
   font-family: "Josefin Sans";
   font-style: normal;
   font-weight: 100 700;
-  font-display: fallback;
   src: url("../fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
 }
 
@@ -151,7 +150,6 @@ section {
   font-family: "Josefin Sans";
   font-style: italic;
   font-weight: 100 700;
-  font-display: fallback;
   src: url("../fonts/JosefinSans-Italic-VariableFont_wght.ttf")
     format("truetype");
 }
@@ -280,14 +278,15 @@ PAGE ANIMATIONS
 ************************************************
 ***********************************************/
 
-.page-enter-active {
-  animation: bounce-in 0.8s;
-}
-
+.page-enter-active,
 .page-leave-active {
-  animation: bounce-out 0.5s;
+  transition: all 0.4s;
 }
-
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
 @media (prefers-reduced-motion: reduce) {
   .page-enter-active {
     animation-play-state: paused;
@@ -298,7 +297,7 @@ PAGE ANIMATIONS
   }
 }
 
-@keyframes bounce-in {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -307,7 +306,7 @@ PAGE ANIMATIONS
   }
 }
 
-@keyframes bounce-out {
+@keyframes fade-out {
   0% {
     opacity: 1;
   }

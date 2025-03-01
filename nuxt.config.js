@@ -33,6 +33,7 @@ export default defineNuxtConfig({
           href: "/favicons/apple-touch-icon.png",
         },
       ],
+      pageTransition: { name: "page", mode: "out-in" },
     },
   },
 
@@ -52,7 +53,7 @@ export default defineNuxtConfig({
   ],
 
   // Nuxt.js modules
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", "@nuxtjs/fontaine"],
 
   vite: {
     optimizeDeps: {

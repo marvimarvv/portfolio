@@ -155,7 +155,7 @@ export default {};
 }
 
 /* exact link will show the styling for only the exact matching link */
-a.nuxt-link-exact-active {
+a.router-link-active {
   font-weight: 900;
 
   path {

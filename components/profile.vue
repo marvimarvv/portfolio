@@ -1,7 +1,7 @@
 <template>
   <aside class="profile mb-xl">
     <nuxt-picture
-      src="marvintandler.png"
+      src="marvintandler.jpg"
       alt="Photo of Marvin Tandler"
       class="profile__picture"
       placeholder
@@ -45,7 +45,7 @@ export default {
     max-height: 40vh;
     aspect-ratio: 1/1;
     border: var(--border);
-    filter: grayscale(0.5) contrast(1.3);
+    filter: hue-rotate(334deg) brightness(1.1) grayscale(0.5);
     overflow: hidden;
 
     &-overlay {
@@ -74,7 +74,6 @@ export default {
       transparent 75%
     );
     background-size: 100%;
-    transition: background-size 3s ease-in-out;
 
     @keyframes backgroundSize {
       0% {
@@ -86,7 +85,7 @@ export default {
     }
 
     @media (prefers-reduced-motion: no-preference) {
-      animation: backgroundSize 30s ease-in-out infinite alternate;
+      animation: backgroundSize 10s ease infinite alternate;
     }
   }
 
@@ -99,6 +98,7 @@ export default {
     padding: 3rem;
     line-height: 1.3;
     position: relative;
+    color: var(--heading-color);
   }
 
   &__word {
