@@ -43,7 +43,9 @@
         :aria-expanded="isThemeSwitcherOpen"
         aria-controls="theme-switcher-id"
         @click="toggleThemeSwitcher"
-      ></button>
+      >
+        Theme Picker
+      </button>
     </div>
   </main>
 </template>
@@ -200,15 +202,6 @@ export default {
   &__main-button {
     box-shadow: var(--box-shadow);
     background: var(--background-gradient);
-    position: relative;
-
-    &::after {
-      content: "Theme Picker";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
 
     .contrast-theme & {
       background: #efefef;
