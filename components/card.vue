@@ -51,9 +51,7 @@ export default {
 
 <style lang="scss">
 .card {
-  position: relative;
   border: var(--border);
-  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -78,7 +76,7 @@ export default {
         .btn {
           color: var(--background);
           background-color: var(--text);
-          transition: all 0.5s ease;
+          transition: color, background-color 0.5s ease;
 
           @media (prefers-reduced-motion: reduce) {
             transition: unset;

@@ -5,10 +5,14 @@
       alt="Photo of Marvin Tandler"
       class="profile__picture"
       placeholder
+      v-gsap.entrance.slide-bottom
     />
     <div class="profile__picture-overlay"></div>
     <div class="profile__quotation-bg"></div>
-    <blockquote class="profile__quotation">
+    <blockquote
+      class="profile__quotation"
+      v-gsap.entrance.slide-bottom.delay-200
+    >
       My passion lies where
       <span class="profile__word profile__word--code">code</span> and
       <span class="profile__word profile__word--design">design</span> meet. As a

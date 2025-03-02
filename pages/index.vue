@@ -1,11 +1,19 @@
 <template>
   <section class="intro">
     <span class="intro__name intro__name--01">
-      <span>M</span><span>A</span><span>R</span> <span>V</span><span>I</span
-      ><span>N</span>
+      <div v-gsap.entrance.slide-bottom>MAR</div>
+      <div v-gsap.entrance.slide-bottom.delay-200>VIN</div>
     </span>
-    <span class="intro__name intro__name--02">TAND</span>
-    <span class="intro__name intro__name--03">
+    <span
+      class="intro__name intro__name--02"
+      v-gsap.entrance.slide-bottom.delay-400
+    >
+      TAND</span
+    >
+    <span
+      class="intro__name intro__name--03"
+      v-gsap.entrance.slide-bottom.delay-600
+    >
       LER
       <div width="100%" height="100%" class="intro__artboard"></div>
     </span>
@@ -14,6 +22,11 @@
     <nuxt-link class="intro__link" to="projects">
       <span class="intro__link-text"> View my projects </span>
     </nuxt-link>
+    <NuxtMarquee autoFill="true" pauseOnHover="true" speed="50" class="marquee">
+      <a href="mailto:marvin.tandler@outlook.com">
+        contact me marvin.tandler@outlook.com&nbsp;
+      </a>
+    </NuxtMarquee>
   </section>
 </template>
 
@@ -83,6 +96,13 @@ export default {
 </script>
 
 <style lang="scss">
+.marquee {
+  font-style: italic;
+  overflow-y: clip;
+  grid-row: 2 / 3;
+  grid-column: 4 / -1;
+}
+
 .intro {
   display: grid;
   grid-template-columns: repeat(7, 1fr);

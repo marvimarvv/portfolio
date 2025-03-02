@@ -12,6 +12,7 @@
           'Built with Next.js',
           'Custom SVG animations',
         ]"
+        v-gsap.entrance.slide-bottom
       ></Card>
       <Card
         siteLink="https://www.fusspflegetandler.de"
@@ -23,6 +24,7 @@
           'Built with SASS',
           'No JS Framework',
         ]"
+        v-gsap.entrance.slide-bottom.delay-200
       ></Card>
       <Card
         siteLink="https://www.dorotalazarski.de"
@@ -34,6 +36,7 @@
           'Built with Wordpress',
           'Scroll animations',
         ]"
+        v-gsap.entrance.slide-bottom.delay-400
       ></Card>
     </div>
   </section>

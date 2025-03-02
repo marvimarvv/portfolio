@@ -53,7 +53,7 @@ export default defineNuxtConfig({
   ],
 
   // Nuxt.js modules
-  modules: ["@nuxt/image", "@nuxtjs/fontaine"],
+  modules: ["@nuxt/image", "@nuxtjs/fontaine", "v-gsap-nuxt", "nuxt-marquee"],
 
   vite: {
     optimizeDeps: {
