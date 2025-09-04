@@ -140,13 +140,13 @@ export default {
   }
 
   &__line {
-    width: 15px;
+    width: var(--border-width);
     grid-column: 2/3;
     grid-row: 2/8;
     justify-self: center;
     border-radius: var(--border-radius);
     transition: all 0.2s ease;
-    border: var(--border);
+    background-image: linear-gradient(to bottom, var(--text), transparent);
     margin-top: 3rem;
   }
 

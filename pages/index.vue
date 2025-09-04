@@ -120,7 +120,7 @@ export default {
 
   &__name {
     font-size: clamp(7rem, 14vw, 24rem);
-    line-height: 1;
+    line-height: 0.9;
     color: var(--heading-color);
 
     &--01 {

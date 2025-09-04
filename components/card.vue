@@ -94,9 +94,11 @@ export default {
   }
 
   &__list {
-    margin-top: auto;
-    margin-bottom: 1.8rem;
+    margin-bottom: auto;
+    padding-top: 0.4rem;
+    padding-bottom: 1.6rem;
     padding-left: 2rem;
+    margin-left: -5px;
     list-style-type: square;
   }
 }

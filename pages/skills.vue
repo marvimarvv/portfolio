@@ -409,7 +409,6 @@ export default {
       font-size: 300%;
       line-height: 100%;
       font-family: monospace;
-      color: var(--brand);
     }
   }
 }

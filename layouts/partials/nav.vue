@@ -89,7 +89,7 @@ export default {};
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
-  padding: 3rem 6rem 6rem;
+  padding: 3rem 6rem 4rem;
   margin: 0 auto;
   list-style: none;
 

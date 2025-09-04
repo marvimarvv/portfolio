@@ -1,10 +1,10 @@
 <template>
   <section>
-    <h1 class="mb-l">My private projects</h1>
+    <h1 class="mb-l">My projects</h1>
     <div class="projects">
       <Card
         siteLink="https://3elm.com"
-        heading="3elm - design and animation studio"
+        heading="3elm - Design and Animation studio"
         alt="Screenshot of the beginning of the website 3elm.com"
         imageLink="/3elm.png"
         :bulletPoints="[
@@ -13,6 +13,18 @@
           'Custom SVG animations',
         ]"
         v-gsap.entrance.slide-bottom
+      ></Card>
+      <Card
+        siteLink="https://coffee-shop.epages.com/"
+        heading="Coffee Shop theme"
+        alt="Screenshot of the beginning of the example website for Coffee Shop - an epages theme"
+        imageLink="/coffeeshop.png"
+        :bulletPoints="[
+          'Built with React and Less',
+          'Covering all functionality on two platforms',
+          'Designed with accessibility in mind',
+        ]"
+        v-gsap.entrance.slide-bottom.delay-200
       ></Card>
       <Card
         siteLink="https://www.fusspflegetandler.de"
@@ -24,11 +36,11 @@
           'Built with SASS',
           'No JS Framework',
         ]"
-        v-gsap.entrance.slide-bottom.delay-200
+        v-gsap.entrance.slide-bottom.delay-400
       ></Card>
       <Card
         siteLink="https://www.dorotalazarski.de"
-        heading="Ernährung Dorota Lazarski"
+        heading="Ernährungstherapie Dorota Lazarski"
         alt="Screenshot of the beginning of the website dorotalazarski.de"
         imageLink="/ernaehrung.png"
         :bulletPoints="[
@@ -36,7 +48,7 @@
           'Built with Wordpress',
           'Scroll animations',
         ]"
-        v-gsap.entrance.slide-bottom.delay-400
+        v-gsap.entrance.slide-bottom.delay-600
       ></Card>
     </div>
   </section>

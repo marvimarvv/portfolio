@@ -106,7 +106,16 @@ export default {
   }
 
   &__word {
-    font-weight: var(--font-weight-bold);
+    font-weight: 700;
+
+    &--code {
+      font-family: monospace;
+    }
+
+    &--design {
+      color: transparent;
+      -webkit-text-stroke: 2px var(--heading-color);
+    }
   }
 }
 </style>

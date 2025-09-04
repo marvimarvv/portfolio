@@ -15,6 +15,7 @@
   /* very dark version of the brand color */
   --text: hsl(var(--hue) var(--saturation) 10%);
   --heading-color: hsl(var(--hue) var(--saturation) 10%);
+  --subheading-color: hsl(var(--hue) var(--saturation) 15%);
   /* very bright brand white */
   --background: hsl(var(--hue) calc(var(--saturation) / 2) 95%);
   --background-gradient: conic-gradient(
@@ -26,6 +27,7 @@
 
   --box-shadow: var(--text) 0px 25px 50px -12px;
   --border: 0.1rem solid var(--text);
+  --border-width: 0.1rem;
   --border-radius: 1px;
 }
 
@@ -36,8 +38,10 @@
   :root {
     --text: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
     --heading-color: hsl(var(--hue) var(--saturation) 100%);
+    --subheading-color: hsl(var(--hue) 10 80%);
     --background: hsl(calc(var(--hue) - 180) var(--saturation) 2%);
     --border: 0.1rem solid var(--text);
+    --border-width: 0.1rem;
   }
 }
 
@@ -45,8 +49,10 @@
   :root {
     --text: #222222;
     --heading-color: #222222;
+    --subheading-color: #222222;
     --background: #efefef;
     --border: 0.3rem solid var(--text);
+    --border-width: 0.3rem;
     --font-weight-normal: 450;
     --font-weight-bold: 700;
     --lightness: 50%;
@@ -56,22 +62,28 @@
 .light-theme {
   --text: hsl(var(--hue) var(--saturation) 10%);
   --heading-color: hsl(var(--hue) var(--saturation) 10%);
+  --subheading-color: hsl(var(--hue) var(--saturation) 15%);
   --background: hsl(var(--hue) calc(var(--saturation) / 2) 95%);
   --border: 0.1rem solid var(--text);
+  --border-width: 0.1rem;
 }
 
 .dark-theme {
   --text: hsl(var(--hue) calc(var(--saturation) / 4) 70%);
   --heading-color: hsl(var(--hue) var(--saturation) 100%);
+  --subheading-color: hsl(var(--hue) 10 80%);
   --background: hsl(calc(var(--hue) - 180) var(--saturation) 2%);
   --border: 0.1rem solid var(--text);
+  --border-width: 0.1rem;
 }
 
 .contrast-theme {
   --text: #222222;
   --heading-color: #222222;
+  --subheading-color: #222222;
   --background: #efefef;
   --border: 0.3rem solid var(--text);
+  --border-width: 0.3rem;
   --font-weight-normal: 450;
   --font-weight-bold: 700;
   --lightness: 50%;
@@ -127,6 +139,10 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight: 700;
+}
+
 section {
   padding: 0 6rem 6rem;
   transition: height 0.3s ease;
@@ -168,6 +184,7 @@ h2 {
   font-weight: var(--font-weight-bold);
   font-size: clamp(2rem, 3vw, 3rem);
   line-height: 1.3;
+  color: var(--subheading-color);
 }
 
 .btn {
