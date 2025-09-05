@@ -84,12 +84,12 @@ export default {
         background-size: 100%;
       }
       100% {
-        background-size: 10%;
+        background-size: 1.5%;
       }
     }
 
     @media (prefers-reduced-motion: no-preference) {
-      animation: backgroundSize 10s ease infinite alternate;
+      animation: backgroundSize 10s ease-in-out infinite alternate;
     }
   }
 
@@ -113,8 +113,8 @@ export default {
     }
 
     &--design {
-      color: transparent;
-      -webkit-text-stroke: 2px var(--heading-color);
+      font-style: italic;
+      font-weight: 100;
     }
   }
 }

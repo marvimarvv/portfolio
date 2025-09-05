@@ -58,12 +58,14 @@ export default {
   word-wrap: break-word;
   background-clip: border-box;
   border-radius: var(--border-radius);
+  overflow: hidden;
 
   img {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
     aspect-ratio: 16/9;
     border-bottom: var(--border);
+    transition: transform 0.3s ease;
   }
 
   &__link {
@@ -73,6 +75,10 @@ export default {
 
     @media (pointer: fine) and (hover: hover) {
       &:hover {
+        img {
+          transform: scale(1.02);
+        }
+
         .btn {
           color: var(--background);
           background-color: var(--text);

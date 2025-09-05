@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1 class="mb-l">My projects</h1>
-    <div class="projects">
+    <div class="projects" v-gsap.entrance.slide-bottom.stagger>
       <Card
         siteLink="https://3elm.com"
         heading="3elm - Design and Animation studio"
@@ -12,7 +12,6 @@
           'Built with Next.js',
           'Custom SVG animations',
         ]"
-        v-gsap.entrance.slide-bottom
       ></Card>
       <Card
         siteLink="https://coffee-shop.epages.com/"
@@ -24,7 +23,6 @@
           'Covering all functionality on two platforms',
           'Designed with accessibility in mind',
         ]"
-        v-gsap.entrance.slide-bottom.delay-200
       ></Card>
       <Card
         siteLink="https://www.fusspflegetandler.de"
@@ -36,7 +34,6 @@
           'Built with SASS',
           'No JS Framework',
         ]"
-        v-gsap.entrance.slide-bottom.delay-400
       ></Card>
       <Card
         siteLink="https://www.dorotalazarski.de"
@@ -48,7 +45,6 @@
           'Built with Wordpress',
           'Scroll animations',
         ]"
-        v-gsap.entrance.slide-bottom.delay-600
       ></Card>
     </div>
   </section>
