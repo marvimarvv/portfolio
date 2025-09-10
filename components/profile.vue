@@ -1,7 +1,7 @@
 <template>
   <aside class="profile mb-xl">
     <nuxt-picture
-      src="marvintandler.jpg"
+      src="marvintandler.png"
       alt="Photo of Marvin Tandler"
       class="profile__picture"
       placeholder
