@@ -25,17 +25,6 @@
         ]"
       ></Card>
       <Card
-        siteLink="https://www.fusspflegetandler.de"
-        heading="Fußpflege Heike Tandler"
-        alt="Screenshot of the beginning of the website fusspflegetandler.de"
-        imageLink="/fusspflege.png"
-        :bulletPoints="[
-          'Excellent page speed core',
-          'Built with SASS',
-          'No JS Framework',
-        ]"
-      ></Card>
-      <Card
         siteLink="https://www.dorotalazarski.de"
         heading="Ernährungstherapie Dorota Lazarski"
         alt="Screenshot of the beginning of the website dorotalazarski.de"
