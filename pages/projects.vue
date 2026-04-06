@@ -3,6 +3,17 @@
     <h1 class="mb-l">My projects</h1>
     <div class="projects" v-gsap.entrance.slide-bottom.stagger>
       <Card
+        siteLink="https://storybook-marvimarvv.netlify.app/"
+        heading="My component library"
+        alt="Screenshot of marvimarvv's storybook with the component library"
+        imageLink="/component-library.png"
+        :bulletPoints="[
+          'Components with HTML & CSS',
+          'Built-in theming with dark mode',
+          'Work in progress',
+        ]"
+      />
+      <Card
         siteLink="https://3elm.com"
         heading="3elm - Design and Animation studio"
         alt="Screenshot of the beginning of the website 3elm.com"
@@ -12,7 +23,7 @@
           'Built with Next.js',
           'Custom SVG animations',
         ]"
-      ></Card>
+      />
       <Card
         siteLink="https://coffee-shop.epages.com/"
         heading="Coffee Shop theme"
@@ -23,18 +34,7 @@
           'Covering all functionality on two platforms',
           'Designed with accessibility in mind',
         ]"
-      ></Card>
-      <Card
-        siteLink="https://www.dorotalazarski.de"
-        heading="Ernährungstherapie Dorota Lazarski"
-        alt="Screenshot of the beginning of the website dorotalazarski.de"
-        imageLink="/ernaehrung.png"
-        :bulletPoints="[
-          'Excellent page speed core',
-          'Built with Wordpress',
-          'Scroll animations',
-        ]"
-      ></Card>
+      />
     </div>
   </section>
 </template>

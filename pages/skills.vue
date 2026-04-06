@@ -254,7 +254,7 @@ export default {
   }
 
   &__icon {
-    flex-basis: 33.3%;
+    flex-basis: 25%;
     position: relative;
     min-height: 30vh;
     aspect-ratio: 1/1;
