@@ -22,7 +22,7 @@
     <nuxt-link class="intro__link" to="projects">
       <span class="intro__link-text"> View my projects </span>
     </nuxt-link>
-    <NuxtMarquee autoFill="true" pauseOnHover="true" speed="50" class="marquee">
+    <NuxtMarquee :autoFill="true" :pauseOnHover="true" :speed="50" class="marquee">
       <a href="mailto:marvin.tandler@outlook.com">
         contact me marvin.tandler@outlook.com&nbsp;
       </a>

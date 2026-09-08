@@ -9,12 +9,12 @@
     "start": "nuxi preview"
   },
   "devDependencies": {
-    "@nuxt/image": "^1.9.0",
+    "@nuxt/image": "^2.1.0",
     "@nuxtjs/fontaine": "^0.5.0",
-    "nuxt": "^3.15.4",
-    "nuxt-marquee": "^1.0.4",
-    "sass": "^1.85.1",
-    "sass-loader": "^16.0.5",
-    "v-gsap-nuxt": "^1.4.4"
+    "nuxt": "^4.5.2",
+    "nuxt-marquee": "^2.0.1",
+    "sass": "^1.104.0",
+    "sass-loader": "^17.0.1",
+    "v-gsap-nuxt": "^1.5.12"
   }
 }
